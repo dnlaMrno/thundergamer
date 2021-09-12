@@ -3,12 +3,12 @@ import '../Cart/CartWidget.css'
 import { FaCartArrowDown } from "react-icons/fa";
 
 
-export function CartWidget () {
+export function CartWidget() {
     return (
         <>
-        <div className="cart-icon">
-        <FaCartArrowDown/>
-        </div>
+            <div className="cart-icon">
+                <FaCartArrowDown />
+            </div>
         </>
     )
 }

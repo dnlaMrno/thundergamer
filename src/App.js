@@ -6,10 +6,8 @@ import './App.css';
 function App() {
   return (
     <>
-    <div>
-         <NavBar/>
-         <ItemListContainer/>
-    </div>
+        <NavBar/>
+        <ItemListContainer/>     
     </>
   );
 }
