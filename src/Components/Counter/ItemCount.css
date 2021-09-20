@@ -1,0 +1,20 @@
+.boton-count {
+    border-radius: 8px;
+    cursor: pointer;
+    width: 30px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    color: rgb(255, 255, 11);
+    border-color: rgba(255, 0, 255, 0.747);
+    background-color: #172433;
+}
+
+.boton-count:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+.agregar {
+    text-transform: capitalize;
+
+}

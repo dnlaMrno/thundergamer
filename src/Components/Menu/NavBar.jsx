@@ -1,35 +1,42 @@
-import React from 'react'
-import '../Menu/NavBar.css'
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { CartWidget } from '../Cart/CartWidget'
+import '../Menu/NavBar.css'
+
+
 
 export function NavBar() {
+
+  const [toggle, SetToggle] = useState(false)
+
+  const toggleHandler = () => {
+    SetToggle(!toggle);
+  }
+
+
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Thunder Gamer</Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#features">Home</Nav.Link>
-              <Nav.Link href="#pricing">Ofertas</Nav.Link>
-              <NavDropdown title="Equipos y Accesorios" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Pc Gamer</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Notebooks</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Monitores</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">Accesorios</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+      <nav>
+        <div >
+          <Link className="logo" to='/Home'>thunder gamer<i className="fas fa-bolt" /></Link>
+        </div>
+        <ul className={toggle ? "active" : ""}>
+          <li>
+            <Link to='/Home' className='nav-items' >Inicio</Link>
+          </li>
+          <li>
+            <Link to='/Category/Equipos' className='nav-items' >Equipos</Link>
+          </li>
+          <li>
+            <Link to='/Category/Accesorios' className='nav-items' >Accesorios</Link>
+          </li>
 
-      <CartWidget />
+        </ul>
+        <div onClick={toggleHandler} className='toggle-button'>
+          <i className={toggle ? "fas fa-times" : "fas fa-bars"} />
+        </div>
+        <CartWidget />
+      </nav>
 
     </>
   )

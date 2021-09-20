@@ -1,14 +1,13 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import '../Cart/CartWidget.css'
-import { FaCartArrowDown } from "react-icons/fa";
 
 
 export function CartWidget() {
     return (
-        <>
-            <div className="cart-icon">
-                <FaCartArrowDown />
-            </div>
-        </>
+        <Link to='Cart'>
+            <button className='boton'>
+                <i className='fas fa-cart-arrow-down' />
+            </button>
+        </Link>
     )
 }

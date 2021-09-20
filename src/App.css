@@ -2,5 +2,52 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Share Tech Mono", monospace;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  margin-right: 15px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 3rem;
+  font-size: 18px;
+  text-transform: capitalize;
+  position: unset;
+  width: 250px;
+  border: solid;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  margin-left: 8px;
+  margin-bottom: 20px;
+}
+
+.car-header {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.car-footer {
+  font-size: 40px;
+  background-color: #172433;
+}
+
+.precio {
+  font-size: 25px;
+  color: #172433;
+  background: #ff18c5c0;
+}
+
+@media screen and (max-width: 900px) {
+
+  .card {
+    margin-left: 20%;
+  }
 }
