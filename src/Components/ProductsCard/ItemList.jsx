@@ -1,4 +1,3 @@
-import { ItemCount } from '../Counter/ItemCount'
 import { Link } from 'react-router-dom'
 
 
@@ -16,7 +15,6 @@ export function ItemList({ articulos }) {
                         </div>
                         <div className="car-body">
                             <img src={articulos.imagen} alt="foto" />
-                            <ItemCount />
                         </div>
                         <div className='precio'>
                             $ {articulos.precio}

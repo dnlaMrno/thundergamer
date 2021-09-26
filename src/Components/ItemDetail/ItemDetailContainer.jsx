@@ -12,7 +12,6 @@ export const ItemDetailContainer = () => {
     const [articulo, setArticulo] = useState([])
 
 
-
     useEffect(() => {
         getFetchUno
             .then(resp => setArticulo(resp))

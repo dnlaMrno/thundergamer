@@ -37,27 +37,3 @@
     letter-spacing: 2px;
     color: rgba(255, 0, 255, 0.747);
 }
-
-.agregar-cart {
-    background-color: #172433;
-    color: rgb(255, 230, 0);
-    border-color: rgb(255, 230, 0);
-    outline: none;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 10px 25px;
-    margin-top: 15px;
-    margin-bottom: 10%;
-    text-transform: capitalize;
-}
-
-.agregar-cart:hover {
-    border-color: rgba(255, 0, 255, 0.747);
-    color: #172433;
-    background-color: transparent;
-}
-
-.boton-carrito {
-    margin-left: 40%;
-    margin-top: -30%;
-}

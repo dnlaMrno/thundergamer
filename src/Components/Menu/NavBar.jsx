@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import { CartWidget } from '../Cart/CartWidget'
+
 import '../Menu/NavBar.css'
 
 
@@ -18,11 +18,11 @@ export function NavBar() {
     <>
       <nav>
         <div >
-          <Link className="logo" to='/Home'>thunder gamer<i className="fas fa-bolt" /></Link>
+          <Link className="logo" to='/'>thunder gamer<i className="fas fa-bolt" /></Link>
         </div>
         <ul className={toggle ? "active" : ""}>
           <li>
-            <Link to='/Home' className='nav-items' >Inicio</Link>
+            <Link to='/home' className='nav-items' >Inicio</Link>
           </li>
           <li>
             <Link to='/Category/Equipos' className='nav-items' >Equipos</Link>
@@ -35,7 +35,13 @@ export function NavBar() {
         <div onClick={toggleHandler} className='toggle-button'>
           <i className={toggle ? "fas fa-times" : "fas fa-bars"} />
         </div>
-        <CartWidget />
+
+        <Link to='Cart'>
+          <button className='boton'>
+            <i className='fas fa-cart-arrow-down' />
+          </button>
+        </Link>
+
       </nav>
 
     </>

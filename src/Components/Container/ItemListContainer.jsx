@@ -3,6 +3,7 @@ import { ItemList } from '../ProductsCard/ItemList'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { getFetch } from '../ProductsCard/Mock'
+import Spinner from 'react-bootstrap/Spinner'
 
 
 
@@ -33,9 +34,8 @@ export function ItemListContainer() {
   return (
     <>
       <div className='titulo'>
-        <h1>Articulos</h1>
         {loading ?
-          <h3>Cargando...</h3>
+          <Spinner animation="grow" />
           :
           <ItemList articulos={articulos} />
         }
