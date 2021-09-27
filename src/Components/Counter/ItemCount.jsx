@@ -1,10 +1,17 @@
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom'
 import '../Counter/ItemCount.css'
 
 
 
 export function ItemCount({ stock, initial }) {
+
+  const [handlerClick, SetHandlerClick] = useState(true)
+
+  const toggleHandler = () => {
+    SetHandlerClick(false);
+  }
+
 
   const [count, setCount] = useState(initial);
 
@@ -24,13 +31,24 @@ export function ItemCount({ stock, initial }) {
     <>
       <div className='boton-carrito'>
         <div>
-          <p className='agregar'>{count}</p>
+          <label className='agregar'>{count}</label>
           <button className='boton-count' onClick={handleOnClick}>+</button>
           <button className='boton-count' onClick={diminishOnClick}>-</button>
         </div>
       </div>
 
-      <button className='agregar-cart'>agregar al carrito</button>
+
+      {
+        handlerClick
+          ?
+          <button onClick={toggleHandler} className='agregar-cart'>agregar al carrito</button>
+          :
+          <Link to='/Cart'>
+            <button className='agregar-cart'>terminar compra</button>
+          </Link>
+      }
+
+
 
     </>
   );

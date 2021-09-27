@@ -1,17 +1,12 @@
 import React from "react"
 import { ItemCount } from '../Counter/ItemCount'
-import { useState } from "react"
-import { Link } from "react-router-dom"
 import '../ItemDetail/ItemDetail.css'
 
 
 export const ItemDetail = ({ articulo }) => {
 
-    const [cambiarBoton, setCambiarBoton] = useState(true)
-
     const onAdd = () => {
         console.log(onAdd)
-        setCambiarBoton(false)
     }
     return (
         <>
@@ -30,18 +25,7 @@ export const ItemDetail = ({ articulo }) => {
                     </div>
                 </div>
             </div>
-            {
-                cambiarBoton ?
-                    <Link to='/Cart'>
-                        <ItemCount stock={5} initial={1} onAdd={onAdd} />
-                    </Link>
-                    :
-
-                    <div>
-                        <button className='agregar-cart'>terminar compra</button>
-                    </div>
-
-            }
+            <ItemCount stock={5} initial={1} onAdd={onAdd} />
         </>
     )
 }

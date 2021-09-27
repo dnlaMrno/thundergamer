@@ -37,3 +37,10 @@
     letter-spacing: 2px;
     color: rgba(255, 0, 255, 0.747);
 }
+
+@media screen and (max-width: 900px) {
+
+    .box {
+        margin-left: 15%;
+    }
+}

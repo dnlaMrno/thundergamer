@@ -25,8 +25,9 @@ nav {
 
 .fa-bolt {
     color: rgba(255, 255, 0, 0.76);
-    margin-left: 0.7rem;
-    font-size: 28px;
+    margin-left: 0.3rem;
+    font-size: 32px;
+    padding-bottom: 5px;
 }
 
 ul {
@@ -61,7 +62,8 @@ ul {
 
 .toggle-button {
     display: none;
-    font-size: 30px;
+    font-size: 35px;
+    padding-bottom: 12px;
 }
 
 .boton {

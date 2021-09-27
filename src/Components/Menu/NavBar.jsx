@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-
+import { MdShoppingCart } from "react-icons/md";
+import { VscChromeClose, VscThreeBars, VscSymbolEvent } from "react-icons/vsc";
 import '../Menu/NavBar.css'
 
 
@@ -18,7 +19,7 @@ export function NavBar() {
     <>
       <nav>
         <div >
-          <Link className="logo" to='/'>thunder gamer<i className="fas fa-bolt" /></Link>
+          <Link className="logo" to='/'>thunder gamer <div className='fa-bolt'><VscSymbolEvent /></div></Link>
         </div>
         <ul className={toggle ? "active" : ""}>
           <li>
@@ -33,12 +34,12 @@ export function NavBar() {
 
         </ul>
         <div onClick={toggleHandler} className='toggle-button'>
-          <i className={toggle ? "fas fa-times" : "fas fa-bars"} />
+          {toggle ? <VscChromeClose /> : <VscThreeBars />}
         </div>
 
         <Link to='Cart'>
           <button className='boton'>
-            <i className='fas fa-cart-arrow-down' />
+            <MdShoppingCart />
           </button>
         </Link>
 

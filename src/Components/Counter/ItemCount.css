@@ -30,7 +30,7 @@
     cursor: pointer;
     padding: 10px 25px;
     margin-left: 7%;
-    margin-top: 15%;
+    margin-top: 18%;
     margin-bottom: 7%;
     text-transform: capitalize;
 }
@@ -44,4 +44,16 @@
 .boton-carrito {
     margin-left: 40%;
     margin-top: -20%;
+}
+
+@media screen and (max-width: 900px) {
+    .agregar-cart {
+        margin-left: 20%;
+        margin-top: 1%;
+    }
+
+    .boton-carrito {
+        margin-left: 60%;
+        margin-top: 1%;
+    }
 }
