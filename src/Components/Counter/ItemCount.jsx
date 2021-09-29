@@ -6,10 +6,10 @@ import '../Counter/ItemCount.css'
 
 export function ItemCount({ stock, initial }) {
 
-  const [handlerClick, SetHandlerClick] = useState(true)
+  const [handler, SetHandler] = useState(true)
 
-  const toggleHandler = () => {
-    SetHandlerClick(false);
+  const handlerClick = () => {
+    SetHandler(false);
   }
 
 
@@ -26,7 +26,6 @@ export function ItemCount({ stock, initial }) {
       setCount(count - 1)
     }
   };
-  console.log(count);
   return (
     <>
       <div className='boton-carrito'>
@@ -37,18 +36,15 @@ export function ItemCount({ stock, initial }) {
         </div>
       </div>
 
-
       {
-        handlerClick
+        handler
           ?
-          <button onClick={toggleHandler} className='agregar-cart'>agregar al carrito</button>
+          <button onClick={handlerClick} className='agregar-cart'>agregar al carrito</button>
           :
           <Link to='/Cart'>
             <button className='agregar-cart'>terminar compra</button>
           </Link>
       }
-
-
 
     </>
   );

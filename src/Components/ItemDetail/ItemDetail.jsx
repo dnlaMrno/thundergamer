@@ -1,20 +1,26 @@
-import React from "react"
+import { useCartContext } from '../Contex/cartContext'
 import { ItemCount } from '../Counter/ItemCount'
 import '../ItemDetail/ItemDetail.css'
 
 
+
 export const ItemDetail = ({ articulo }) => {
 
-    const onAdd = () => {
-        console.log(onAdd)
+    const { agregarItems } = useCartContext()
+
+    const handleAgregar = () => {
+        agregarItems(articulo)
     }
+
+
+    const onAdd = () => {
+        console.log(onAdd);
+    }
+
     return (
         <>
             <div className='details'>
-                <div>
-                    <img className='big-img' src={articulo.imagen} alt="foto" />
-                </div>
-
+                <img className='big-img' src={articulo.imagen} alt="foto" />
                 <div className='box'>
                     <div className='row'>
                         <h4>{articulo.name}</h4>
@@ -26,6 +32,7 @@ export const ItemDetail = ({ articulo }) => {
                 </div>
             </div>
             <ItemCount stock={5} initial={1} onAdd={onAdd} />
+            <button onClick={handleAgregar}>sumar al carrito</button>
         </>
     )
 }
