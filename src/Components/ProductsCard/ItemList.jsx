@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 
 
 
-
 export function ItemList({ articulos }) {
 
 
@@ -12,7 +11,7 @@ export function ItemList({ articulos }) {
                 {
                     articulos.map(articulos => <div key={articulos.id} className="card">
                         <div className="car-header">
-                            {articulos.name}
+                            {articulos.nombre}
                         </div>
                         <div className="car-body">
                             <img src={articulos.imagen} alt="foto" />
@@ -21,7 +20,7 @@ export function ItemList({ articulos }) {
                             $ {articulos.precio}
                         </div>
                         <div className="car-footer">
-                            <Link to={`/detalle/${articulos.id}`} >
+                            <Link to={`/detalle/${articulos.id}`}>
                                 <button className="btn btn-outline-warning btn-block">Detalle del articulo</button>
                             </Link>
                         </div>

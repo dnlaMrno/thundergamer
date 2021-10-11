@@ -1,17 +1,17 @@
 import audifonos from '../../Assets/Audifonos.jpg'
 
 
-const articulo = 
+
+const articulo =  
     {
         id: '1',
-        imagen: audifonos,
-        name: "Audifonos",
+        imagen:audifonos,
+        nombre: "Audifonos",
         categoria:'Accesorios',
-        precio:2500
+        precio:2500,
+        descripcion:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandaead ipisicing elit. Repudiandae adipisicing elit. Repudiandae',
     }
 
 export const getFetchUno = new Promise((resolve) => {
-    setTimeout(() => {
         resolve(articulo)
-    }, 2000)
-});
+    },)

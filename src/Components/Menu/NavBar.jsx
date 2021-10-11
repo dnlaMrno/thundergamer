@@ -37,7 +37,7 @@ export function NavBar() {
           {toggle ? <VscChromeClose /> : <VscThreeBars />}
         </div>
 
-        <Link to='Cart'>
+        <Link to='/Cart'>
           <button className='boton'>
             <MdShoppingCart />
           </button>

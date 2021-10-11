@@ -18,7 +18,15 @@
   text-transform: capitalize;
   position: unset;
   width: 250px;
-  border: solid;
+  border: 1.5px solid;
+  box-shadow: 2px 8px 20px rgb(199, 196, 196);
+  transition: 0.4s linear;
+}
+
+.card:hover {
+  box-shadow: none;
+  opacity: 0.8;
+
 }
 
 .card img {
