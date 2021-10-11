@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
-import '../Cart/CartWidget.css'
 import { useCartContext } from '../Context/cartContext'
 import { BsFillTrashFill } from "react-icons/bs"
+import '../Cart/CartWidget.css'
 
 
 export function CartWidget({ condition = true }) {
@@ -15,38 +15,41 @@ export function CartWidget({ condition = true }) {
     return (
         <>
 
-
             <div className='cartTitle'>
                 <h1>productos agregados</h1>
             </div>
-            <div className='box1'>
-                {
-                    cart.map(cart => <div key={cart.nombre}>
-                        <div className='cartName'>
-                            <p>{cart.nombre}</p>
+            {cart.length === 0 ?
+                <div>
+                    <h1 className='title'>No tienes ningun producto cargado</h1>
+                    <Link to='/Home'>
+                        <button className='comprar'>ir a comprar</button>
+                    </Link>
+                </div>
+                :
+                cart.map(cart => <div key={cart.id}>
+                    <div className='cartName'>
+                        <p>{cart.nombre}</p>
+                    </div>
+                    <div className='cartImg'>
+                        <img src={cart.imagen} alt="foto" />
+                    </div>
+                    <div className='cartBox'>
+                        <div className='cartDetail'>
+                            <p>{cart.descripcion}</p>
                         </div>
-                        <div className='cartImg'>
-                            <img src={cart.imagen} alt="foto" />
-                        </div>
-                        <div className='cartBox'>
-                            <div className='cartDetail'>
-                                <p>{cart.descripcion}</p>
-                            </div>
-                            <div className='cartPrice'>
-                                <p> $ {cart.precio}</p>
-                            </div>
-                        </div>
-                        <div className='vaciar' onClick={() => vaciarCarrito()}>
-                            <BsFillTrashFill />
+                        <div className='cartPrice'>
+                            <p> $ {cart.precio}</p>
                         </div>
                     </div>
-                    )
-                }
-            </div>
-            <Link to='/Home'>
-                <button className='seguir-compra'>seguir comprando</button>
-            </Link>
-
+                    <Link to='/Home'>
+                        <button className='seguir-compra'>seguir comprando</button>
+                    </Link>
+                    <div className='vaciar' onClick={() => vaciarCarrito()}>
+                        <BsFillTrashFill />
+                    </div>
+                </div>
+                )
+            }
         </>
     )
 }

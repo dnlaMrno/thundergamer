@@ -52,6 +52,26 @@
     text-transform: capitalize;
 }
 
+.seguir-cart {
+    background-color: #172433;
+    color: rgb(255, 230, 0);
+    border-color: rgb(255, 230, 0);
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-left: 3%;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    text-transform: capitalize;
+}
+
+.seguir-cart:hover {
+    border-color: rgba(255, 0, 255, 0.747);
+    color: #172433;
+    background-color: transparent;
+}
+
 
 .regresar {
     color: #000;

@@ -16,8 +16,8 @@ export const UseProvider = ({ children }) => {
     }
 
 
-    function addItem(item) {
-        setCart([...cart, item])
+    function addItem(item, cantidad) {
+        setCart([...cart, { item: item, quantity: cantidad }])
     }
     console.log(cart);
 

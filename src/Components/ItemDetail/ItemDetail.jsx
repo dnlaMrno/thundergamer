@@ -18,7 +18,7 @@ export const ItemDetail = ({ articulo }) => {
     const { addItem } = useCartContext()
 
     const onAdd = () => {
-        addItem(articulo)
+        addItem({ articulo })
     }
 
 
@@ -47,11 +47,16 @@ export const ItemDetail = ({ articulo }) => {
                     ?
                     <button onClick={handlerClick} className='agregar-cart'>agregar al carrito</button>
                     :
-                    <Link to='/Cart'>
-                        <button onClick={onAdd} className='agregar-cart'>terminar compra</button>
-                    </Link>
+                    <div>
+                        <Link to='/Cart'>
+                            <button onClick={onAdd} className='agregar-cart'>terminar compra</button>
+                        </Link>
+                        <Link to='/Home'>
+                            <button className='seguir-cart'>seguir comprando</button>
+                        </Link>
+                    </div>
             }
-            <ItemCount stock={5} initial={1} onAdd={onAdd} />
+            <ItemCount initial={1} stock={5} onAdd={onAdd} />
         </>
     )
 }

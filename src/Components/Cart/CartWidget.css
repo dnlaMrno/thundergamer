@@ -11,6 +11,15 @@
     text-decoration: underline fuchsia;
 }
 
+.title {
+    padding-top: 10%;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
 .cartName {
     padding-top: 5%;
     font-size: 20px;
@@ -39,12 +48,32 @@
 
 .cartBox .cartPrice {
     font-size: 18px;
-    padding-right: 15%;
-    margin-left: 20%;
+    padding-right: 30%;
+    margin-left: 10%;
 }
 
 .cartPrice {
     width: 30px;
+}
+
+.comprar {
+    background-color: #172433;
+    color: rgb(255, 230, 0);
+    border-color: rgb(255, 230, 0);
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-bottom: 6%;
+    text-transform: uppercase;
+}
+
+.comprar:hover {
+    border-color: rgba(255, 0, 255, 0.747);
+    color: #172433;
+    background-color: transparent;
 }
 
 .seguir-compra {
@@ -54,10 +83,11 @@
     outline: none;
     border-radius: 4px;
     cursor: pointer;
-    padding: 10px 25px;
-    margin-left: 8%;
-    margin-bottom: 6%;
-    text-transform: capitalize;
+    padding: 5px 5px;
+    margin-left: 9%;
+    margin-bottom: 4%;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 .seguir-compra:hover {
@@ -68,8 +98,8 @@
 
 .vaciar {
     font-size: 25px;
-    padding-left: 95%;
-    padding-bottom: 3%;
+    padding-left: 25%;
+    margin-top: -7%;
 }
 
 .vaciar :hover {
