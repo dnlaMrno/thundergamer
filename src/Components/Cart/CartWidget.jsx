@@ -26,19 +26,19 @@ export function CartWidget({ condition = true }) {
                     </Link>
                 </div>
                 :
-                carro.map(articulo => <div key={articulo.id}>
+                carro.map(articulo => <div key={articulo.item.id}>
                     <div className='cartName'>
-                        <p>{articulo.nombre}</p>
+                        <p>{articulo.item.nombre}</p>
                     </div>
                     <div className='cartImg'>
-                        <img src={articulo.imagen} alt="foto" />
+                        <img src={articulo.item.imagen} alt="foto" />
                     </div>
                     <div className='cartBox'>
                         <div className='cartDetail'>
-                            <p>{articulo.descripcion}</p>
+                            <p>{articulo.item.descripcion}</p>
                         </div>
                         <div className='cartPrice'>
-                            <p> $ {articulo.precio}</p>
+                            <p> $ {articulo.item.precio}</p>
                         </div>
                     </div>
                     <Link to='/Home'>
