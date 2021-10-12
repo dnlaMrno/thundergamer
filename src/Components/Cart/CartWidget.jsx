@@ -6,7 +6,7 @@ import '../Cart/CartWidget.css'
 
 export function CartWidget({ condition = true }) {
 
-    const { cart, vaciarCarrito } = useCartContext()
+    const { carro, vaciarCarrito } = useCartContext()
 
     //   if (!condition) {
     //      return <h2>No puede ver el carrito</h2>
@@ -18,7 +18,7 @@ export function CartWidget({ condition = true }) {
             <div className='cartTitle'>
                 <h1>productos agregados</h1>
             </div>
-            {cart.length === 0 ?
+            {carro.length === 0 ?
                 <div>
                     <h1 className='title'>No tienes ningun producto cargado</h1>
                     <Link to='/Home'>
@@ -26,19 +26,19 @@ export function CartWidget({ condition = true }) {
                     </Link>
                 </div>
                 :
-                cart.map(cart => <div key={cart.id}>
+                carro.map(articulo => <div key={articulo.id}>
                     <div className='cartName'>
-                        <p>{cart.nombre}</p>
+                        <p>{articulo.nombre}</p>
                     </div>
                     <div className='cartImg'>
-                        <img src={cart.imagen} alt="foto" />
+                        <img src={articulo.imagen} alt="foto" />
                     </div>
                     <div className='cartBox'>
                         <div className='cartDetail'>
-                            <p>{cart.descripcion}</p>
+                            <p>{articulo.descripcion}</p>
                         </div>
                         <div className='cartPrice'>
-                            <p> $ {cart.precio}</p>
+                            <p> $ {articulo.precio}</p>
                         </div>
                     </div>
                     <Link to='/Home'>

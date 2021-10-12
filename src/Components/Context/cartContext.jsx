@@ -9,21 +9,21 @@ export const useCartContext = () => {
 
 export const UseProvider = ({ children }) => {
 
-    const [cart, setCart] = useState([])
+    const [carro, setCarro] = useState([])
 
     const vaciarCarrito = () => {
-        setCart([])
+        setCarro([])
     }
 
 
-    function addItem(item, cantidad) {
-        setCart([...cart, { item: item, quantity: cantidad }])
+    function addItem(item, quantity) {
+        setCarro([...carro, { item, quantity }])
     }
-    console.log(cart);
+    console.log(carro);
 
     return (
 
-        <CartContext.Provider value={{ cart, addItem, vaciarCarrito }}>
+        <CartContext.Provider value={{ carro, addItem, vaciarCarrito }}>
             {children}
         </CartContext.Provider>
     )

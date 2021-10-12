@@ -3,9 +3,9 @@ import { NavBar } from './Components/Menu/NavBar';
 import { ItemListContainer } from './Components/Container/ItemListContainer';
 import { ItemDetailContainer } from './Components/ItemDetail/ItemDetailContainer';
 import { CartWidget } from './Components/Cart/CartWidget';
+import { UseProvider } from './Components/Context/cartContext';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-import { UseProvider } from './Components/Context/cartContext';
 
 
 
