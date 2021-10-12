@@ -16,6 +16,7 @@
 
 .agregar {
     text-transform: capitalize;
+    padding-top: 25%;
     padding-left: 9%;
     font-size: 20px;
 
@@ -26,10 +27,57 @@
     margin-top: -30%;
 }
 
+
+.agregar-cart {
+    background-color: #172433;
+    color: rgb(255, 230, 0);
+    border-color: rgb(255, 230, 0);
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-left: 7%;
+    margin-top: 15%;
+    margin-bottom: 6%;
+    text-transform: capitalize;
+}
+
+.seguir-cart {
+    background-color: #172433;
+    color: rgb(255, 230, 0);
+    border-color: rgb(255, 230, 0);
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin-left: 3%;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    text-transform: capitalize;
+}
+
+.seguir-cart:hover {
+    border-color: rgba(255, 0, 255, 0.747);
+    color: #172433;
+    background-color: transparent;
+}
+
+
+.agregar-cart:hover {
+    border-color: rgba(255, 0, 255, 0.747);
+    color: #172433;
+    background-color: transparent;
+}
+
 @media screen and (max-width: 900px) {
 
     .boton-carrito {
         margin-left: 60%;
+        margin-top: 1%;
+    }
+
+    .agregar-cart {
+        margin-left: 20%;
         margin-top: 1%;
     }
 }

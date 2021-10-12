@@ -2,11 +2,14 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { MdShoppingCart } from "react-icons/md";
 import { VscChromeClose, VscThreeBars, VscSymbolEvent } from "react-icons/vsc";
+import { useCartContext } from '../Context/cartContext';
 import '../Menu/NavBar.css'
 
 
-
 export function NavBar() {
+
+  const { iconCarrito } = useCartContext()
+
 
   const [toggle, SetToggle] = useState(false)
 
@@ -31,20 +34,19 @@ export function NavBar() {
           <li>
             <Link to='/Category/Accesorios' className='nav-items' >Accesorios</Link>
           </li>
-
         </ul>
         <div onClick={toggleHandler} className='toggle-button'>
           {toggle ? <VscChromeClose /> : <VscThreeBars />}
         </div>
-
         <Link to='/Cart'>
+          <div className='acumulador'>
+            {iconCarrito()}
+          </div>
           <button className='boton'>
             <MdShoppingCart />
           </button>
         </Link>
-
       </nav>
-
     </>
   )
 }
