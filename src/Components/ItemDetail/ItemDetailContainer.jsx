@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ItemDetail } from './ItemDetail';
 import { useParams } from 'react-router-dom'
-import { getFetchUno } from './itemDetailMock'
+import { getFirestore } from '../Services/getFirebase';
 import Spinner from 'react-bootstrap/Spinner'
 import '../ItemDetail/ItemDetail.css'
 
@@ -9,19 +9,17 @@ import '../ItemDetail/ItemDetail.css'
 
 export const ItemDetailContainer = () => {
 
-    const { idArticulo } = useParams()
     const [articulo, setArticulo] = useState({})
-
     const [loading, setLoading] = useState(true)
+    const { idArticulo } = useParams()
 
     useEffect(() => {
-        setTimeout(() => {
-            getFetchUno
-                .then(resp => setArticulo(resp))
-                .finally(() => setLoading(false))
-        }, 2000)
-    },
-        [idArticulo])
+        const dbQuery = getFirestore()
+        dbQuery.collection('Items').doc(idArticulo).get()
+            .then((docu) => setArticulo({ id: docu.id, ...docu.data() }))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+    }, [idArticulo])
 
     return (
         <>

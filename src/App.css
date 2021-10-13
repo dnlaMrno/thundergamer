@@ -20,7 +20,6 @@
   width: 250px;
   border: 1.5px solid;
   box-shadow: 2px 8px 20px rgb(199, 196, 196);
-  transition: 0.4s linear;
 }
 
 .card:hover {

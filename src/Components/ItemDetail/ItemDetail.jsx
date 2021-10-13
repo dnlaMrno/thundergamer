@@ -5,7 +5,6 @@ import { GrRewind } from "react-icons/gr"
 import '../ItemDetail/ItemDetail.css'
 
 
-
 export const ItemDetail = ({ articulo }) => {
 
     const { addItem } = useCartContext()
@@ -21,7 +20,7 @@ export const ItemDetail = ({ articulo }) => {
             <Link to='/Home'>
                 <span className='regresar'> <GrRewind /> </span>
             </Link>
-            <div className='details'>
+            <div key={articulo.id} className='details'>
                 <img className='big-img' src={articulo.imagen} alt="foto" />
                 <div className='box'>
                     <div className='row'>
@@ -34,7 +33,7 @@ export const ItemDetail = ({ articulo }) => {
                 </div>
             </div>
 
-            <ItemCount initial={1} stock={5} onAdd={onAdd} />
+            <ItemCount initial={1} stock={8} onAdd={onAdd} />
         </>
     )
 }

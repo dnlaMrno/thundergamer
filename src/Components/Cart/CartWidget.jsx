@@ -4,13 +4,10 @@ import { BsFillTrashFill } from "react-icons/bs"
 import '../Cart/CartWidget.css'
 
 
-export function CartWidget({ condition = true }) {
+export function CartWidget() {
 
-    const { carro, vaciarCarrito } = useCartContext()
+    const { carro, deleteItem, precioTotal } = useCartContext()
 
-    //   if (!condition) {
-    //      return <h2>No puede ver el carrito</h2>
-    // }
 
     return (
         <>
@@ -33,23 +30,22 @@ export function CartWidget({ condition = true }) {
                     <div className='cartImg'>
                         <img src={articulo.item.imagen} alt="foto" />
                     </div>
-                    <div className='cartBox'>
-                        <div className='cartDetail'>
-                            <p>{articulo.item.descripcion}</p>
-                        </div>
-                        <div className='cartPrice'>
-                            <p> $ {articulo.item.precio}</p>
-                        </div>
+                    <div className=''>
+                        <h2>precio unitario</h2>
+                        <p>{articulo.item.precio}</p>
                     </div>
                     <Link to='/Home'>
                         <button className='seguir-compra'>seguir comprando</button>
                     </Link>
-                    <div className='vaciar' onClick={() => vaciarCarrito()}>
+                    <div className='vaciar' onClick={() => deleteItem(articulo)}>
                         <BsFillTrashFill />
                     </div>
                 </div>
                 )
             }
+            <div className='totalCompra'>
+                <h1>Total de la compra $ {precioTotal()}</h1>
+            </div>
         </>
     )
 }
