@@ -11,7 +11,9 @@ export const UseProvider = ({ children }) => {
 
     const [carro, setCarro] = useState([])
 
-
+    const vaciarCarrito = () => {
+        setCarro([])
+    }
 
     function addItem(item, cantidad) {
         const index = carro.findIndex(i => i.item.id === item.id)
@@ -27,17 +29,17 @@ export const UseProvider = ({ children }) => {
 
     console.log(carro);
 
-    const deleteItem = (item) => {
-        const deleteArticulo = carro.filter((article) => article.item.id !== item.item.id);
+    const borrarItem = (item) => {
+        const borrarArticulo = carro.filter((article) => article.item.id !== item.item.id);
 
-        setCarro([...deleteArticulo])
+        setCarro([...borrarArticulo])
     }
 
-    const iconCarrito = () => {
+    const cantidadCarrito = () => {
         return carro.reduce((acum, cantidad) => acum + cantidad.quantity, 0)
     }
 
-    const precioTotal = () => {
+    const sumaTotal = () => {
         return carro.reduce((acum, cantidad) => (acum + (cantidad.quantity * cantidad.item.precio)), 0)
     }
 
@@ -46,9 +48,10 @@ export const UseProvider = ({ children }) => {
         <CartContext.Provider value={{
             carro,
             addItem,
-            iconCarrito,
-            deleteItem,
-            precioTotal,
+            cantidadCarrito,
+            borrarItem,
+            sumaTotal,
+            vaciarCarrito
         }}>
             {children}
         </CartContext.Provider>

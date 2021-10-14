@@ -22,12 +22,13 @@ export const ItemDetailContainer = () => {
     }, [idArticulo])
 
     return (
-        <>
+
+        <div>
             {loading ?
                 <Spinner className='loading' animation="grow" />
                 :
                 <ItemDetail articulo={articulo} />
             }
-        </>
+        </div>
     )
 }

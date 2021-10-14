@@ -16,7 +16,8 @@ export const ItemDetail = ({ articulo }) => {
 
 
     return (
-        <>
+
+        <div>
             <Link to='/Home'>
                 <span className='regresar'> <GrRewind /> </span>
             </Link>
@@ -34,6 +35,7 @@ export const ItemDetail = ({ articulo }) => {
             </div>
 
             <ItemCount initial={1} stock={8} onAdd={onAdd} />
-        </>
+
+        </div>
     )
 }

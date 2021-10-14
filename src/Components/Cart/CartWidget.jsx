@@ -1,17 +1,18 @@
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../Context/cartContext'
 import { BsFillTrashFill } from "react-icons/bs"
+import 'firebase/firestore'
 import '../Cart/CartWidget.css'
 
 
 export function CartWidget() {
 
-    const { carro, deleteItem, precioTotal } = useCartContext()
+    const { carro, borrarItem, sumaTotal } = useCartContext()
 
 
     return (
-        <>
 
+        <div>
             <div className='cartTitle'>
                 <h1>productos agregados</h1>
             </div>
@@ -30,22 +31,31 @@ export function CartWidget() {
                     <div className='cartImg'>
                         <img src={articulo.item.imagen} alt="foto" />
                     </div>
-                    <div className=''>
-                        <h2>precio unitario</h2>
+                    <div className='cartPrice'>
                         <p>{articulo.item.precio}</p>
                     </div>
-                    <Link to='/Home'>
-                        <button className='seguir-compra'>seguir comprando</button>
-                    </Link>
-                    <div className='vaciar' onClick={() => deleteItem(articulo)}>
+                    <div className='vaciar' onClick={() => borrarItem(articulo)}>
                         <BsFillTrashFill />
                     </div>
                 </div>
                 )
             }
-            <div className='totalCompra'>
-                <h1>Total de la compra $ {precioTotal()}</h1>
-            </div>
-        </>
+
+            {carro.length === 0 ?
+                <div>
+                </div>
+                :
+                <div>
+                    <Link to='/Home'>
+                        <button className='seguir-compra'>seguir comprando</button>
+                    </Link>
+                    <Link to='/Formulario'>
+                        <button className='seguir-compra'>siguiente</button>
+                    </Link>
+                    <h1 className='totalCompra'>Total de la compra $ {sumaTotal()}</h1>
+                </div>
+            }
+
+        </div>
     )
 }

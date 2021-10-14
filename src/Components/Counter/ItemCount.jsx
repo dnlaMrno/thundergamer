@@ -18,7 +18,7 @@ export function ItemCount({ stock, initial, onAdd }) {
   }
 
   const diminishOnClick = () => {
-    if (count > stock) {
+    if (count > 0) {
       setCount(count - 1)
     }
   }
@@ -29,7 +29,8 @@ export function ItemCount({ stock, initial, onAdd }) {
   }
 
   return (
-    <>
+
+    <div>
       <div className='boton-carrito'>
         <div>
           <label className='agregar'>{count}</label>
@@ -45,14 +46,14 @@ export function ItemCount({ stock, initial, onAdd }) {
           :
           <div>
             <Link to='/Cart'>
-              <button className='agregar-cart'>terminar compra</button>
+              <button className='agregar-cart'>ir al carrito</button>
             </Link>
             <Link to='/Home'>
               <button className='seguir-cart'>seguir comprando</button>
             </Link>
           </div>
       }
-    </>
-  );
+    </div>
+  )
 }
 

@@ -27,16 +27,14 @@ export function ItemListContainer() {
 
   }, [idCategory])
   return (
-    <>
 
-      <div className='titulo'>
-        {loading ?
-          <Spinner animation="grow" />
-          :
-          <ItemList articulos={articulos} />
-        }
-      </div>
-    </>
+    <div className='titulo'>
+      {loading ?
+        <Spinner animation="grow" />
+        :
+        <ItemList articulos={articulos} />
+      }
+    </div>
+
   )
-
 };

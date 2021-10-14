@@ -6,7 +6,8 @@ export function ItemList({ articulos }) {
 
 
     return (
-        <>
+
+        <div>
             <div className='container'>
                 {
                     articulos.map(articulos => <div key={articulos.id} className="card">
@@ -28,6 +29,6 @@ export function ItemList({ articulos }) {
                     )
                 }
             </div>
-        </>
+        </div>
     )
 }

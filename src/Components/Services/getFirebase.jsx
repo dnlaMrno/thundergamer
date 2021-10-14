@@ -22,5 +22,6 @@ export function getFirebase() {
 //ESTA ES LA QUE MAS SE VA USAR (es nuestra base de datos inicializada), Cuando yo importe getFirestore me retorna inicializada mi base de datos con esta app.
 
 export function getFirestore() {
+
     return firebase.firestore(app)
 }

@@ -8,7 +8,7 @@ import '../Menu/NavBar.css'
 
 export function NavBar() {
 
-  const { iconCarrito } = useCartContext()
+  const { cantidadCarrito } = useCartContext()
 
 
   const [toggle, SetToggle] = useState(false)
@@ -19,7 +19,9 @@ export function NavBar() {
 
 
   return (
-    <>
+
+    <div>
+
       <nav>
         <div >
           <Link className="logo" to='/'>thunder gamer <div className='fa-bolt'><VscSymbolEvent /></div></Link>
@@ -40,13 +42,14 @@ export function NavBar() {
         </div>
         <Link to='/Cart'>
           <div className='acumulador'>
-            {iconCarrito()}
+            {cantidadCarrito()}
           </div>
           <button className='boton'>
             <MdShoppingCart />
           </button>
         </Link>
       </nav>
-    </>
+
+    </div>
   )
 }
