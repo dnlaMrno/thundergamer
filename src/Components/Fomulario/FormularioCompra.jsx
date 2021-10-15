@@ -2,7 +2,10 @@ import { Link } from 'react-router-dom'
 import { useCartContext } from '../Context/cartContext'
 import { getFirestore } from '../Services/getFirebase'
 import firebase from "firebase"
+import { useState } from 'react'
+import '../Fomulario/FormularioCompra.css'
 import 'firebase/firestore'
+
 
 
 
@@ -11,6 +14,13 @@ export function FormularioCompra() {
 
     const { carro, sumaTotal, vaciarCarrito } = useCartContext()
 
+    const [formData, setFormData] = useState({
+        nombre: '',
+        correo: '',
+        telefono: ''
+    })
+
+
     const handleOnSubmit = (e) => {
         e.preventDefault()
 
@@ -18,7 +28,7 @@ export function FormularioCompra() {
 
         orden.date = firebase.firestore.Timestamp.fromDate(new Date())
 
-        orden.buyer = { name: 'dani', email: 'danip2824@gmail.com', telefono: '1133988' }
+        orden.buyer = formData
 
         orden.total = sumaTotal();
 
@@ -33,9 +43,21 @@ export function FormularioCompra() {
         const db = getFirestore()
 
         db.collection('ordenes').add(orden)
-            .then(respuesta => console.log(respuesta))
+            .finally(() => setFormData({
+                nombre: '',
+                correo: '',
+                telefono: ''
+            }))
+
     }
 
+    function handleOnChange(e) {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        })
+    }
+    console.log(formData);
     return (
 
         <div>
@@ -51,6 +73,9 @@ export function FormularioCompra() {
                     <div className='cartImg'>
                         <img src={articulo.item.imagen} alt="foto" />
                     </div>
+                    <div className='cartPrice'>
+                        <p>{articulo.item.precio}</p>
+                    </div>
                 </div>
                 )
             }
@@ -60,11 +85,36 @@ export function FormularioCompra() {
                 <p>no hay productos</p>
                 :
                 <div>
-                    <button className='seguir-compra' onClick={vaciarCarrito}>vaciar orden</button>
-                    <button className='seguir-compra' onClick={handleOnSubmit}>terminar compra</button>
+                    <form
+                        onChange={handleOnChange}
+                    >
+                        <input
+                            type='text'
+                            placeholder='ingrese nombre'
+                            name='nombre'
+                            value={formData.nombre}
+                        />
+
+                        <input
+                            type='email'
+                            placeholder='ingrese su correo'
+                            name='correo'
+                            value={formData.correo}
+                        />
+
+                        <input
+                            type='text'
+                            placeholder='ingrese telefono'
+                            name='telefono'
+                            value={formData.telefono}
+                        />
+                    </form>
+                    <button className='btn-vaciar' onClick={vaciarCarrito}>vaciar orden</button>
+                    <button className='btn-vaciar' onClick={handleOnSubmit}>terminar compra</button>
                     <h1>Total de la compra $ {sumaTotal()}</h1>
                 </div>
             }
+
         </div>
     )
 }
