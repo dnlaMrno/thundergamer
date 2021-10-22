@@ -10,6 +10,7 @@
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
+
 }
 
 .card {
@@ -19,7 +20,8 @@
   position: unset;
   width: 250px;
   border: 1.5px solid;
-  box-shadow: 2px 8px 20px rgb(199, 196, 196);
+  box-shadow: 3px 8px 20px rgba(135, 136, 63, 0.781);
+
 }
 
 .card:hover {

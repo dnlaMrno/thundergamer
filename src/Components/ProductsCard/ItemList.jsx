@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 
 export function ItemList({ articulos }) {
 
-
     return (
 
         <div>

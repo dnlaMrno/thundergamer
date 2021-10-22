@@ -10,6 +10,7 @@
     width: 300px;
     margin: 25px;
     display: block;
+
 }
 
 .box .row {
@@ -24,6 +25,7 @@
     margin: 15px 0;
     margin-right: 50%;
     text-align: justify;
+
 }
 
 .box .row h4 {

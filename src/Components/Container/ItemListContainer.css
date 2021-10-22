@@ -1,6 +1,10 @@
+.contenedor {
+    background: #D7DBDD;
+}
+
 .titulo {
     text-transform: uppercase;
     font-size: 70px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
 }

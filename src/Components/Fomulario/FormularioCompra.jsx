@@ -14,11 +14,7 @@ export function FormularioCompra() {
 
     const { carro, sumaTotal, vaciarCarrito } = useCartContext()
 
-    const [formData, setFormData] = useState({
-        nombre: '',
-        correo: '',
-        telefono: ''
-    })
+    const [data, setData] = useState(initial)
 
 
     const handleOnSubmit = (e) => {
@@ -26,9 +22,9 @@ export function FormularioCompra() {
 
         let orden = {}
 
-        orden.date = firebase.firestore.Timestamp.fromDate(new Date())
+        orden.date = firebase.firestore.Timestamp.date(new Date())
 
-        orden.buyer = formData
+        orden.buyer = data
 
         orden.total = sumaTotal();
 
@@ -43,21 +39,17 @@ export function FormularioCompra() {
         const db = getFirestore()
 
         db.collection('ordenes').add(orden)
-            .finally(() => setFormData({
-                nombre: '',
-                correo: '',
-                telefono: ''
-            }))
+            .finally(() => setData(initial))
 
     }
 
     function handleOnChange(e) {
-        setFormData({
-            ...formData,
+        setData({
+            ...data,
             [e.target.name]: e.target.value
         })
     }
-    console.log(formData);
+    console.log(data);
     return (
 
         <div>
@@ -77,9 +69,10 @@ export function FormularioCompra() {
                         <p>{articulo.item.precio}</p>
                     </div>
                 </div>
-                )
-            }
 
+                )
+
+            }
 
             {carro.length === 0 ?
                 <p>no hay productos</p>
@@ -92,21 +85,21 @@ export function FormularioCompra() {
                             type='text'
                             placeholder='ingrese nombre'
                             name='nombre'
-                            value={formData.nombre}
+                            value={data.nombre}
                         />
 
                         <input
                             type='email'
                             placeholder='ingrese su correo'
                             name='correo'
-                            value={formData.correo}
+                            value={data.correo}
                         />
 
                         <input
                             type='text'
                             placeholder='ingrese telefono'
                             name='telefono'
-                            value={formData.telefono}
+                            value={data.telefono}
                         />
                     </form>
                     <button className='btn-vaciar' onClick={vaciarCarrito}>vaciar orden</button>
@@ -114,7 +107,12 @@ export function FormularioCompra() {
                     <h1>Total de la compra $ {sumaTotal()}</h1>
                 </div>
             }
-
         </div>
     )
+}
+
+const initial = {
+    nombre: '',
+    correo: '',
+    telefono: ''
 }
