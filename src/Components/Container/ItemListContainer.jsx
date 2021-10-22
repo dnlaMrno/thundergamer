@@ -37,6 +37,9 @@ export function ItemListContainer() {
       <div className='contenedor'>
         <SliderImage slides={SliderData} />
         <div className='titulo'>
+          <h1>PRODUCTOS DESTACADOS</h1>
+        </div>
+        <div className='titulo'>
           {loading ?
             <Spinner animation="grow" />
             :

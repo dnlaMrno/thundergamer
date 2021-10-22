@@ -5,8 +5,6 @@ import img4 from '../../Assets/img4.png'
 
 
 
-
-
 export const SliderData = [
 
     {
