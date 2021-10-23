@@ -33,8 +33,8 @@ export function ItemCount({ stock, initial, onAdd }) {
     <div>
       <div className='boton-carrito'>
         <div>
-          <label className='agregar'>{count}</label>
           <button className='boton-count' onClick={handleOnClick}>+</button>
+          <label className='agregar'>{count}</label>
           <button className='boton-count' onClick={diminishOnClick}>-</button>
         </div>
       </div>
@@ -46,10 +46,10 @@ export function ItemCount({ stock, initial, onAdd }) {
           :
           <div>
             <Link to='/Cart'>
-              <button className='agregar-cart'>ir al carrito</button>
+              <button className='seguir-cart'>ir al carrito</button>
             </Link>
             <Link to='/Home'>
-              <button className='seguir-cart'>seguir comprando</button>
+              <button className='agregar-cart1'>seguir comprando</button>
             </Link>
           </div>
       }

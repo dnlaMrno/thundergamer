@@ -4,9 +4,10 @@
 }
 
 .box1 {
-    background: #D0D3D4;
+    background: #fff;
     padding-top: 1%;
     margin: 3% 5% 0 5%;
+    border-radius: 20px;
 }
 
 .cartTitle {
@@ -110,4 +111,15 @@
 .vaciar :hover {
 
     color: rgba(255, 0, 255, 0.747);
+}
+
+@media screen and (max-width: 900px) {
+
+    .comprar {
+        margin-left: 35%;
+    }
+
+    .cartTitle {
+        padding-top: 10%;
+    }
 }

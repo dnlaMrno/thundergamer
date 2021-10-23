@@ -1,7 +1,7 @@
 import { useCartContext } from '../Context/cartContext'
 import { ItemCount } from '../Counter/ItemCount'
 import { Link } from 'react-router-dom'
-import { GrRewind } from "react-icons/gr"
+import { FcUpLeft } from "react-icons/fc"
 import '../ItemDetail/ItemDetail.css'
 
 
@@ -17,19 +17,23 @@ export const ItemDetail = ({ articulo }) => {
 
     return (
 
-        <div>
-            <Link to='/Home'>
-                <span className='regresar'> <GrRewind /> </span>
+        <div className='box2'>
+            <Link to='/'>
+                <span className='regresar'> <FcUpLeft /> </span>
             </Link>
             <div key={articulo.id} className='details'>
                 <img className='big-img' src={articulo.imagen} alt="foto" />
                 <div className='box'>
                     <div className='row'>
-                        <h4>{articulo.nombre}</h4>
+                        <h2>{articulo.nombre}</h2>
                         <span>$ {articulo.precio}</span>
                     </div>
                     <div className='contenido'>
-                        <p>{articulo.descripcion}</p>
+                        <div className='contenido1'>
+                            <p className='texto1'>{articulo.caracteristica1}</p>
+                            <p className='texto2'>{articulo.caracteristica2}</p>
+                            <p className='texto3'>{articulo.caracteristica3}</p>
+                        </div>
                     </div>
                 </div>
             </div>

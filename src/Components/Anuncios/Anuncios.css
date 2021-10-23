@@ -17,7 +17,7 @@
     margin: 3rem;
     padding-left: 6%;
     margin-right: 8%;
-    border-radius: 15%;
+    border-radius: 20% 10%;
     overflow: hidden;
 }
 
@@ -38,12 +38,13 @@
     .propaUno {
         width: 80%;
         height: 80%;
+        border-radius: 20% 10%;
         padding-left: 12%;
         padding-bottom: 1%;
     }
 
     .propaUno:hover {
-        -webkit-transform: scale(1);
-        transform: scale(1);
+        -webkit-transform: none;
+        transform: none;
     }
 }

@@ -1,3 +1,8 @@
+.box2 {
+    margin-left: 8%;
+}
+
+
 .details {
     display: flex;
     justify-content: space-between;
@@ -9,23 +14,49 @@
 .big-img {
     width: 300px;
     margin: 25px;
+    overflow: hidden;
     display: block;
+    cursor: pointer;
+}
 
+.big-img:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    transition: 1s;
 }
 
 .box .row {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    margin-top: 2%;
 
 }
 
 .contenido {
-    line-height: 1.5;
-    margin: 15px 0;
-    margin-right: 50%;
+    background: #D0D3D4;
+    margin-right: 30%;
+    padding: 2% 3%;
+    border-radius: 10px;
+}
+
+.contenido .texto2 {
+    background: #F0F3F4;
+    padding: 2% 2%;
+    margin-left: -1%;
+    border-radius: 10px;
+}
+
+.contenido1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: justify;
 
+}
+
+.texto1 {
+    margin-bottom: 3%;
 }
 
 .box .row h4 {
@@ -42,12 +73,9 @@
 
 
 .regresar {
-    color: #000;
-    font-size: 40px;
-    padding-left: 7%;
+    font-size: 30px;
+    padding-left: 1%;
 }
-
-
 
 .loading {
     margin-left: 50%;
@@ -59,4 +87,22 @@
     .box {
         margin-left: 15%;
     }
+
+    .contenido {
+        margin-right: 25%;
+        margin-left: -15%;
+    }
+
+    .box h2 {
+        font-size: 2.2rem;
+        padding-right: 10%;
+        margin-left: -10%;
+    }
+
+    .row span {
+        font-size: 2rem;
+        padding-left: 10%;
+
+    }
+
 }
