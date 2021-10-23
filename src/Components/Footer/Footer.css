@@ -1,0 +1,52 @@
+.footer {
+    padding: 40px 0;
+    background-color: #17202A;
+    color: #fff;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.footer .social span {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #F0F3F4;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+}
+
+.footer .social span:hover {
+    color: rgba(255, 255, 0, 0.76);
+}
+
+.footer .list {
+    margin-top: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 8px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer .list p {
+    display: inline-block;
+    padding: 15px 18px;
+    text-transform: capitalize;
+}
+
+.footer .list p:hover {
+    color: rgb(255, 0, 255);
+}
+
+.footer .copy-right {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+}

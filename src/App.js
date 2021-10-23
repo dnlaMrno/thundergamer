@@ -7,6 +7,7 @@ import { UseProvider } from './Components/Context/cartContext';
 import { FormularioCompra } from './Components/Fomulario/FormularioCompra';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+import { Footer } from './Components/Footer/Footer';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/Cart' exact component={CartWidget}/>
           <Route path='/Formulario' exact component={FormularioCompra}/>
           </Switch>
+          <Footer/>
     </Router>
     </UseProvider>
   )
