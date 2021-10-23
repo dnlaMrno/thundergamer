@@ -1,7 +1,5 @@
 .slider {
-
-    position: relative;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,14 +7,14 @@
 
 .image {
     border-radius: 8px;
-    width: 1250px;
-    height: 600px;
+    width: 1200px;
+    height: 500px;
 }
 
 .derecha {
     position: absolute;
-    top: 50%;
-    right: 32px;
+    top: 55%;
+    right: 4%;
     font-size: 3rem;
     color: #fff;
     z-index: 10;
@@ -25,13 +23,13 @@
 }
 
 .derecha:hover {
-    color: fuchsia;
+    color: #ff18c5c0;
 }
 
 .izquierda {
     position: absolute;
-    top: 50%;
-    left: 32px;
+    top: 55%;
+    left: 4%;
     font-size: 3rem;
     color: #fff;
     z-index: 10;
@@ -40,7 +38,7 @@
 }
 
 .izquierda:hover {
-    color: fuchsia;
+    color: #ff18c5c0;
 }
 
 .slide {
@@ -51,5 +49,25 @@
 .slide.active {
     opacity: 1;
     transition-duration: 1s;
+}
+
+@media screen and (max-width: 900px) {
+
+    .image {
+        border-radius: 30px;
+        width: 100%;
+        height: 100%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+
+    .derecha {
+        font-size: 2.5rem;
+    }
+
+    .izquierda {
+        font-size: 2.5rem;
+    }
 
 }

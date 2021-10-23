@@ -3,11 +3,10 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Spinner from 'react-bootstrap/Spinner'
 import { getFirestore } from '../Services/getFirebase'
-import '../Container/ItemListContainer.css'
 import { SliderImage } from '../Slider/SliderImage'
 import { SliderData } from '../Slider/SliderData'
-
-
+import '../Container/ItemListContainer.css'
+import { Anuncios } from '../Anuncios/Anuncios'
 
 
 
@@ -32,14 +31,15 @@ export function ItemListContainer() {
       .catch(err => console.log(err))
       .finally(() => setLoading(false))
   }, [idCategory])
+
   return (
     <>
+
+
       <div className='contenedor'>
         <SliderImage slides={SliderData} />
         <div className='titulo'>
-          <h1>PRODUCTOS DESTACADOS</h1>
-        </div>
-        <div className='titulo'>
+          <Anuncios />
           {loading ?
             <Spinner animation="grow" />
             :

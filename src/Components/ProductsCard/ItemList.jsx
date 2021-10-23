@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import '../ProductsCard/ItemList.css'
 
 
 
@@ -7,6 +8,8 @@ export function ItemList({ articulos }) {
     return (
 
         <div>
+            <p className='subTituloDos'>nuestros productos</p>
+
             <div className='container'>
                 {
                     articulos.map(articulos => <div key={articulos.id} className="card">
@@ -21,7 +24,7 @@ export function ItemList({ articulos }) {
                         </div>
                         <div className="car-footer">
                             <Link to={`/detalle/${articulos.id}`}>
-                                <button className="btn btn-outline-warning btn-block">Detalle del articulo</button>
+                                <button className="btn btn-outline-warning btn-block">Detalle</button>
                             </Link>
                         </div>
                     </div>

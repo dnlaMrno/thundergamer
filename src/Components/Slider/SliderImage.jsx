@@ -5,6 +5,7 @@ import '../Slider/Slider.css'
 
 
 export const SliderImage = ({ slides }) => {
+
     const [current, setCurrent] = useState(0)
     const length = slides.length
 
@@ -33,7 +34,6 @@ export const SliderImage = ({ slides }) => {
                         {index === current && (<img src={slide.imagen} alt="foto" className='image' />)}
                     </div>
                 )
-
             })}
         </div>
 

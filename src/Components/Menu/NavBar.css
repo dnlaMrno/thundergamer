@@ -5,7 +5,7 @@ nav {
     height: 70px;
     background-color: #17202A;
     color: #fff;
-    padding: 2rem;
+    padding: 3rem;
     position: relative;
 }
 
@@ -103,8 +103,13 @@ ul {
 
 @media screen and (max-width: 900px) {
 
+    nav {
+        padding: 2rem;
+    }
+
     ul.active {
         left: -40%;
+        position: fixed;
     }
 
     .fa-bolt {
