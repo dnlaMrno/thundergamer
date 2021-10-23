@@ -12,35 +12,36 @@ export function CartWidget() {
 
     return (
 
-        <div>
+        <div className='content'>
             <div className='cartTitle'>
                 <h1>productos agregados</h1>
             </div>
-            {carro.length === 0 ?
-                <div>
-                    <h1 className='title'>No tienes ningun producto cargado</h1>
-                    <Link to='/Home'>
-                        <button className='comprar'>ir a comprar</button>
-                    </Link>
-                </div>
-                :
-                carro.map(articulo => <div key={articulo.item.id}>
-                    <div className='cartName'>
-                        <p>{articulo.item.nombre}</p>
+            <div className='box1'>
+                {carro.length === 0 ?
+                    <div>
+                        <h1 className='title'>No tienes ningun producto cargado</h1>
+                        <Link to='/Home'>
+                            <button className='comprar'>ir a comprar</button>
+                        </Link>
                     </div>
-                    <div className='cartImg'>
-                        <img src={articulo.item.imagen} alt="foto" />
+                    :
+                    carro.map(articulo => <div key={articulo.item.id}>
+                        <div className='cartName'>
+                            <p>{articulo.item.nombre}</p>
+                        </div>
+                        <div className='cartImg'>
+                            <img src={articulo.item.imagen} alt="foto" />
+                        </div>
+                        <div className='cartPrice'>
+                            <p>{articulo.item.precio}</p>
+                        </div>
+                        <div className='vaciar' onClick={() => borrarItem(articulo)}>
+                            <BsFillTrashFill />
+                        </div>
                     </div>
-                    <div className='cartPrice'>
-                        <p>{articulo.item.precio}</p>
-                    </div>
-                    <div className='vaciar' onClick={() => borrarItem(articulo)}>
-                        <BsFillTrashFill />
-                    </div>
-                </div>
-                )
-            }
-
+                    )
+                }
+            </div>
             {carro.length === 0 ?
                 <div>
                 </div>

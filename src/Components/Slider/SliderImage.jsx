@@ -1,6 +1,6 @@
 import { SliderData } from "./SliderData"
 import { useState } from "react"
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
+import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai"
 import '../Slider/Slider.css'
 
 
@@ -26,8 +26,8 @@ export const SliderImage = ({ slides }) => {
     return (
 
         <div className='slider'>
-            <FaArrowAltCircleLeft className='izquierda' onClick={prevSlide} />
-            <FaArrowAltCircleRight className='derecha' onClick={nextSlide} />
+            <AiFillCaretLeft className='izquierda' onClick={prevSlide} />
+            <AiFillCaretRight className='derecha' onClick={nextSlide} />
             {SliderData.map((slide, index) => {
                 return (
                     <div className={index === current ? 'slide active' : 'slide'} key={index}>
