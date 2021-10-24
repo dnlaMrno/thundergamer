@@ -15,8 +15,9 @@
 }
 
 .card {
+    padding-top: 10px;
     margin: 3rem;
-    font-size: 18px;
+    font-size: 14px;
     text-transform: capitalize;
     position: unset;
     width: 250px;

@@ -33,10 +33,10 @@ export function CartWidget() {
                             <img src={articulo.item.imagen} alt="foto" />
                         </div>
                         <div className='cartPrice'>
-                            <p>{articulo.item.precio}</p>
-                        </div>
-                        <div className='vaciar' onClick={() => borrarItem(articulo)}>
-                            <BsFillTrashFill />
+                            <p>$ {articulo.item.precio}</p>
+                            <div className='vaciar' onClick={() => borrarItem(articulo)}>
+                                <BsFillTrashFill />
+                            </div>
                         </div>
                     </div>
                     )
@@ -46,14 +46,15 @@ export function CartWidget() {
                 <div>
                 </div>
                 :
-                <div>
+                <div className='totalBotones'>
+                    <h1 className='totalCompra'>Total de la compra $ {sumaTotal()}</h1>
                     <Link to='/Home'>
                         <button className='seguir-compra'>seguir comprando</button>
                     </Link>
                     <Link to='/Formulario'>
                         <button className='seguir-compra'>siguiente</button>
                     </Link>
-                    <h1 className='totalCompra'>Total de la compra $ {sumaTotal()}</h1>
+
                 </div>
             }
 
