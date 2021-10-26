@@ -67,7 +67,7 @@ span {
 
 .cargado {
     background-color: #D0D3D4;
-    padding: 2% 3% 2% 3%;
+    padding: 2% 3% 2% 5%;
     border-radius: 8px;
     font-size: 20px;
     text-transform: uppercase;
@@ -88,4 +88,40 @@ form .user-detail .input-box {
     width: 100%;
     margin-bottom: 5%;
     border-radius: 8px;
+}
+
+.volver {
+    background-color: #172433;
+    color: rgb(255, 230, 0);
+    border-color: rgb(255, 230, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 7px 7px;
+    margin-left: 13%;
+    text-transform: uppercase;
+}
+
+.volver:hover {
+    border-color: rgba(255, 0, 255, 0.747);
+    color: rgba(255, 0, 255, 0.747);
+}
+
+.sub-titulo {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 900px) {
+
+    .cargado {
+        font-size: 14px;
+        text-transform: uppercase;
+        padding-left: 10%;
+        margin: 4% -5% 4% -5%;
+    }
+
+    .btn-vaciar2 {
+        margin-left: 10%;
+        margin-top: 2%;
+    }
 }

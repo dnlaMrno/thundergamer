@@ -9,6 +9,9 @@ export function CartWidget() {
 
     const { carro, borrarItem, sumaTotal } = useCartContext()
 
+    function registrar() {
+        alert('Debes Registrarte para Terminar la Compra')
+    }
 
     return (
 
@@ -51,11 +54,12 @@ export function CartWidget() {
                     <Link to='/Home'>
                         <button className='seguir-compra'>seguir comprando</button>
                     </Link>
-                    <Link to='/Formulario'>
-                        <button className='seguir-compra'>siguiente</button>
+                    <Link to='/Formulario' >
+                        <button className='seguir-compra' onClick={registrar} >siguiente</button>
                     </Link>
                 </div>
             }
         </div>
     )
+
 }

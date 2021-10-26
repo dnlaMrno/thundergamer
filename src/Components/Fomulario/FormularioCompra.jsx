@@ -4,7 +4,7 @@ import { getFirestore } from '../Services/getFirebase'
 import firebase from "firebase"
 import { useState } from 'react'
 import '../Fomulario/FormularioCompra.css'
-import 'firebase/firestore'
+
 
 
 export function FormularioCompra() {
@@ -49,9 +49,9 @@ export function FormularioCompra() {
                 <div className='recuadro'>
                     {carro.length === 0 ?
                         <div>
-                            <p>no hay productos</p>
+                            <p className='sub-titulo'>ups.. parece que algo paso...</p>
                             <Link to='/'>
-                                <button>volver al inicio</button>
+                                <button className='volver'>volver al inicio</button>
                             </Link>
                         </div>
                         :
@@ -98,11 +98,11 @@ export function FormularioCompra() {
                                         name='telefono'
                                         value={formData.telefono}
                                     />
+                                    <div>
+                                        <button className='btn-vaciar' onSubmit={handleOnSubmit} >terminar compra</button>
+                                        <button className='btn-vaciar2' onClick={vaciarCarrito}>cancelar compra</button>
+                                    </div>
                                 </form>
-                                <div className='btn-contenedor'>
-                                    <button className='btn-vaciar' onSubmit={handleOnSubmit}>terminar compra</button>
-                                    <button className='btn-vaciar2' onClick={vaciarCarrito}>cancelar compra</button>
-                                </div>
                                 <div className='cargado'>
                                     <p>productos cargados = {cantidadCarrito()}</p>
                                     <p>Total de la compra = $ {sumaTotal()}</p>
