@@ -34,7 +34,7 @@ export function FormularioCompra() {
 
         const db = getFirestore()
         db.collection('ordenes').add(orden)
-            .then(resp => console.log(resp))
+            .catch((err) => console.log(err))
             .finally(() => setFormData(initialFormData))
     }
 
