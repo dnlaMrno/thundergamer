@@ -17,9 +17,13 @@ export function FormularioCompra() {
         e.preventDefault()
 
         let orden = {}
+
         orden.date = firebase.firestore.Timestamp.fromDate(new Date())
+
         orden.buyer = formData
+
         orden.total = sumaTotal();
+
         orden.Items = carro.map(cartArt => {
             const id = cartArt.item.id;
             const nombre = cartArt.item.nombre;
@@ -27,9 +31,10 @@ export function FormularioCompra() {
             const precio = cartArt.item.precio * cartArt.quantity;
             return { id, nombre, precio, stock }
         })
+
         const db = getFirestore()
         db.collection('ordenes').add(orden)
-            .catch(err => console.log(err))
+            .then(resp => console.log(resp))
             .finally(() => setFormData(initialFormData))
     }
 
@@ -47,9 +52,10 @@ export function FormularioCompra() {
             </p>
             <div className='product-content'>
                 <div className='recuadro'>
+
                     {carro.length === 0 ?
                         <div>
-                            <p className='sub-titulo'>ups.. parece que algo paso...</p>
+                            <p className='sub-titulo'>¿ deseas continuar ?...</p>
                             <Link to='/'>
                                 <button className='volver'>volver al inicio</button>
                             </Link>
@@ -57,7 +63,9 @@ export function FormularioCompra() {
                         :
                         <div className='user-detail'>
                             <div className='input-box'>
-                                <form>
+                                <form
+                                    onSubmit={handleOnSubmit}
+                                >
                                     <span>nombre*</span>
                                     <input required
                                         onChange={handleOnChange}
@@ -99,7 +107,7 @@ export function FormularioCompra() {
                                         value={formData.telefono}
                                     />
                                     <div>
-                                        <button className='btn-vaciar' onSubmit={handleOnSubmit} >terminar compra</button>
+                                        <button className='btn-vaciar' >terminar compra</button>
                                         <button className='btn-vaciar2' onClick={vaciarCarrito}>cancelar compra</button>
                                     </div>
                                 </form>

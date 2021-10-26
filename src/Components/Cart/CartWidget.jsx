@@ -22,7 +22,7 @@ export function CartWidget() {
             <div className='box1'>
                 {carro.length === 0 ?
                     <div>
-                        <h1 className='title'>No tienes ningun producto cargado</h1>
+                        <p className='cart-cargar'>no tienes ningun producto cargado...</p>
                         <Link to='/Home'>
                             <button className='comprar'>ir a comprar</button>
                         </Link>
