@@ -5,7 +5,8 @@
 
 .box1 {
     background: #fff;
-    padding-top: 1%;
+    padding-top: 1.5%;
+    padding-bottom: .3%;
     margin: 3% 5% 0 5%;
     border-radius: 20px;
 }
@@ -20,11 +21,12 @@
 }
 
 .title {
+    text-align: center;
     padding-top: 6%;
     font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center;
+    margin-left: 3%;
 }
 
 .cartName {
@@ -33,7 +35,7 @@
     padding-top: 1%;
     padding-bottom: .2%;
     font-size: 18px;
-    padding-left: 18%;
+    text-align: center;
     text-transform: capitalize;
     border-radius: 20px;
     margin-right: 40%;
@@ -152,7 +154,7 @@
 
     .cartName {
         margin-right: .2%;
-        padding-left: 28%;
+        text-align: center;
     }
 
     .cartImg img {

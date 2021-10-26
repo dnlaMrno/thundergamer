@@ -18,7 +18,7 @@ export const Footer = () => {
                 <p>nosotros</p>
             </div>
             <p className='copy-right'>
-                comisión 19725 reactjs @2021
+                comisión 19725 reactjs @2021 coder house
             </p>
         </div>
     )

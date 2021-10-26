@@ -5,9 +5,9 @@ import { ItemDetailContainer } from './Components/ItemDetail/ItemDetailContainer
 import { CartWidget } from './Components/Cart/CartWidget';
 import { UseProvider } from './Components/Context/cartContext';
 import { FormularioCompra } from './Components/Fomulario/FormularioCompra';
+import { Footer } from './Components/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
-import { Footer } from './Components/Footer/Footer';
 
 
 

@@ -27,8 +27,6 @@ export const UseProvider = ({ children }) => {
         }
     }
 
-    console.log(carro);
-
     const borrarItem = (item) => {
         const borrarArticulo = carro.filter((article) => article.item.id !== item.item.id);
 

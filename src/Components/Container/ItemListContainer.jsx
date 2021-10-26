@@ -5,9 +5,8 @@ import Spinner from 'react-bootstrap/Spinner'
 import { getFirestore } from '../Services/getFirebase'
 import { SliderImage } from '../Slider/SliderImage'
 import { SliderData } from '../Slider/SliderData'
-import '../Container/ItemListContainer.css'
 import { Anuncios } from '../Anuncios/Anuncios'
-
+import '../Container/ItemListContainer.css'
 
 
 export function ItemListContainer() {
