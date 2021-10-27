@@ -4,6 +4,10 @@
 
 - ✨Proyecto Ecommerce realizado durante la cursada de que duro 7 semanas , 4 horas semanales ✨
 
+##Link del proyecto
+
+- ✨ thundergamer.netlify.app ✨
+
 ## Caracteristica del Proyecto
 
 Es una Ecommerce que simula una tienda que se dedica al rubor de venta de accesorios y quipos informáticos de alta alidad y complejidad para mejorar la experiencia de hacer teletrabajo o jugar en linea, a su vez vender componentes para repotenciar algun equipo adquirido anteriormente.
