@@ -98,7 +98,7 @@
     text-transform: uppercase;
 }
 
-.seguir-compra:hover {
+.seguir-compra button:hover {
     border-color: rgba(255, 0, 255, 0.747);
     color: rgba(255, 0, 255, 0.747);
 }

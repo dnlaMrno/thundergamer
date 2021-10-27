@@ -1,6 +1,6 @@
 .box3 {
     background: #17202A;
-    height: 200vh;
+    height: auto;
 }
 
 .titulo4 {
@@ -23,9 +23,10 @@
 
 .recuadro {
     display: flex;
-    height: 100%;
     justify-content: center;
-    margin: 3% 30% 30%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 3%;
 }
 
 span {
@@ -67,11 +68,11 @@ span {
 
 .cargado {
     background-color: #D0D3D4;
-    padding: 2% 3% 2% 5%;
+    padding: 2% 4% 2% 5%;
     border-radius: 8px;
     font-size: 20px;
     text-transform: uppercase;
-    margin: 2% 10% 2% 10%;
+    margin: 3% 10% 4% 10%;
 }
 
 .recuadro form .user-detail {

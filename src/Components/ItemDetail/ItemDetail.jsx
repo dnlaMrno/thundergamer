@@ -19,7 +19,7 @@ export const ItemDetail = ({ articulo }) => {
 
         <div className='box2'>
             <Link to='/'>
-                <span className='regresar'> <FcUpLeft /> </span>
+                <div className='regresar'> <FcUpLeft /> </div>
             </Link>
             <div key={articulo.id} className='details'>
                 <img className='big-img' src={articulo.imagen} alt="foto" />

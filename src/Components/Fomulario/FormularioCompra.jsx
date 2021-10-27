@@ -52,7 +52,6 @@ export function FormularioCompra() {
             </p>
             <div className='product-content'>
                 <div className='recuadro'>
-
                     {carro.length === 0 ?
                         <div>
                             <p className='sub-titulo'>¿ deseas continuar ?...</p>

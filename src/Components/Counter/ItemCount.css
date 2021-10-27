@@ -23,7 +23,7 @@
 
 .boton-carrito {
     margin-left: 50%;
-    margin-top: -50%;
+    margin-top: -60%;
 }
 
 
@@ -36,7 +36,7 @@
     cursor: pointer;
     padding: 10px 25px;
     margin-left: 30%;
-    margin-top: 40%;
+    margin-top: 50%;
     margin-bottom: 6%;
     text-transform: capitalize;
 }
@@ -50,7 +50,7 @@
     cursor: pointer;
     padding: 10px 25px;
     margin-left: 25%;
-    margin-top: 40%;
+    margin-top: 50%;
     margin-bottom: 6%;
     text-transform: capitalize;
 }
@@ -115,6 +115,7 @@
 
     .seguir-cart {
         margin-top: 1%;
-        margin-left: 20%;
+        margin-left: 10%;
     }
+
 }
