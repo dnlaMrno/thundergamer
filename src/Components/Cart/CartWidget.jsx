@@ -49,14 +49,16 @@ export function CartWidget() {
                 <div>
                 </div>
                 :
-                <div className='totalBotones'>
+                <div >
                     <h1 className='totalCompra'>Total de la compra = $ {sumaTotal()}</h1>
-                    <Link to='/Home'>
-                        <button className='seguir-compra'>seguir comprando</button>
-                    </Link>
-                    <Link to='/Formulario' >
-                        <button className='seguir-compra' onClick={registrar} >siguiente</button>
-                    </Link>
+                    <div className='seguir-compra'>
+                        <Link to='/Home'>
+                            <button >seguir comprando</button>
+                        </Link>
+                        <Link to='/Formulario' >
+                            <button onClick={registrar} >siguiente</button>
+                        </Link>
+                    </div>
                 </div>
             }
         </div>

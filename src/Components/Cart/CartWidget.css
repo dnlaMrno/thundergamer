@@ -1,14 +1,15 @@
 .content {
     background: #17202A;
-    height: 200vh;
+    height: auto;
 }
 
 .box1 {
+    height: auto;
     background: #fff;
     padding-top: 1.5%;
     padding-bottom: .3%;
     margin: 3% 5% 0 5%;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .cartTitle {
@@ -31,6 +32,7 @@
     text-transform: capitalize;
     border-radius: 20px;
     margin-right: 40%;
+    margin-left: 1%;
 }
 
 
@@ -72,25 +74,27 @@
     color: #ff18c5c0;
 }
 
-.totalBotones {
-    margin-left: 65%;
-    margin-top: -10%;
-}
 
 .totalCompra {
-    padding-bottom: 3%;
+    padding-bottom: 1%;
     font-size: 25px;
-    color: #172433;
+    color: #fff;
+    padding-left: 60%;
+    padding-top: -80%;
 }
 
 .seguir-compra {
+    margin-left: 63%;
+}
+
+.seguir-compra button {
     background-color: #172433;
     color: rgb(255, 230, 0);
     border-color: rgb(255, 230, 0);
     border-radius: 4px;
     cursor: pointer;
     padding: 7px 7px;
-    margin-right: 3%;
+    margin-right: 1%;
     text-transform: uppercase;
 }
 
@@ -103,8 +107,9 @@
     background-color: rgba(255, 0, 255, 0.274);
     padding-left: 22%;
     border-radius: 20px;
-    margin-bottom: 1.5%;
+    margin-bottom: 3%;
     margin-right: 40%;
+    margin-left: 1%;
 }
 
 .cartPrice p {
