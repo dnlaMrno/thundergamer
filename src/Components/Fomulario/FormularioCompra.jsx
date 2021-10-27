@@ -14,16 +14,13 @@ export function FormularioCompra() {
     const [formData, setFormData] = useState(initialFormData)
 
     const handleOnSubmit = (e) => {
-        e.preventDefault()
 
+        e.preventDefault()
         let orden = {}
 
         orden.date = firebase.firestore.Timestamp.fromDate(new Date())
-
         orden.buyer = formData
-
         orden.total = sumaTotal();
-
         orden.Items = carro.map(cartArt => {
             const id = cartArt.item.id;
             const nombre = cartArt.item.nombre;
