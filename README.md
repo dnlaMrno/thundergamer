@@ -6,7 +6,7 @@
 
 ##Link del proyecto
 
-- ✨ thundergamer.netlify.app ✨
+- ✨  ✨
 
 ## Caracteristica del Proyecto
 
