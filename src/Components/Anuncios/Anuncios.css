@@ -4,6 +4,7 @@
     font-size: 80%;
     text-decoration: underline rgba(255, 255, 0, 0.76);
     text-align: center;
+    padding-top: 7%;
 }
 
 .propa {
@@ -27,7 +28,6 @@
     transition: 1s;
 }
 
-
 @media screen and (max-width: 900px) {
 
     .propa {
@@ -36,15 +36,42 @@
     }
 
     .propaUno {
-        width: 80%;
-        height: 80%;
+        width: 55%;
+        margin-left: 22%;
         border-radius: 20% 10%;
-        padding-left: 12%;
         padding-bottom: 1%;
     }
 
     .propaUno:hover {
         -webkit-transform: none;
         transform: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .propaUno {
+        margin-left: 25%;
+        border-radius: 20% 10%;
+        margin-top: -4%;
+    }
+
+    .subTitulo {
+        font-size: 75%;
+        margin-top: -10%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .propaUno {
+        border-radius: 26% 10%;
+        margin-left: 26%;
+        margin-top: -6%;
+    }
+
+    .subTitulo {
+        font-size: 60%;
+        margin-top: -30%;
     }
 }

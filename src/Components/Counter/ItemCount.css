@@ -117,5 +117,26 @@
         margin-top: 1%;
         margin-left: 10%;
     }
+}
 
+@media screen and (max-width: 400px) {
+
+    .boton-carrito {
+        margin-left: 40%;
+        margin-bottom: 2%;
+    }
+
+    .agregar {
+        padding-left: 6%;
+        margin-right: -2%;
+    }
+
+    .seguir-cart {
+        margin-left: 25%;
+    }
+
+    .agregar-cart1 {
+        margin-left: 20%;
+        margin-top: -8%;
+    }
 }

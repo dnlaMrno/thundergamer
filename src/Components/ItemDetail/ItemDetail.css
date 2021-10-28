@@ -102,5 +102,36 @@
         font-size: 2rem;
         padding-left: 10%;
     }
+}
 
+@media screen and (max-width: 600px) {
+
+    .big-img {
+        margin-left: -3%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .big-img {
+        margin-left: -8%;
+    }
+
+    .box2 {
+        padding-left: 2%;
+        margin-left: 2%;
+    }
+
+    .big-img {
+        width: 210px;
+        margin-left: 2%;
+    }
+
+    .row span {
+        font-size: 1.5rem;
+    }
+
+    .box h2 {
+        font-size: 1.5rem;
+    }
 }

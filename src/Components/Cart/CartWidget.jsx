@@ -63,5 +63,4 @@ export function CartWidget() {
             }
         </div>
     )
-
 }

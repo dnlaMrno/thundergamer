@@ -6,7 +6,7 @@
 }
 
 .image {
-    border-radius: 8px;
+    border-radius: 10px;
     width: 1200px;
     height: 500px;
 }
@@ -54,61 +54,85 @@
 @media screen and (max-width: 1200px) {
 
     .image {
-        width: 130%;
-        height: 100%;
-        padding-top: 3%;
-        margin-left: -10%;
-        margin-right: -10%;
+        margin-top: 3%;
+        padding-right: 2%;
+        padding-left: 2%;
+        border-radius: 3%;
     }
 
     .derecha {
-        font-size: 2.5rem;
-        margin-right: 10%;
+        font-size: 3.5rem;
+        margin-right: 3%;
 
     }
 
     .derecha:hover {
         color: #17202A;
+    }
+
+    .izquierda {
+        font-size: 3.5rem;
+        margin-right: 3%;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .image {
+
+        width: 110%;
+        height: auto;
+        padding-right: 10%;
+    }
+
+    .derecha {
+        font-size: 2.5rem;
+        margin-right: 15%;
     }
 
     .izquierda {
         font-size: 2.5rem;
         margin-left: 15%;
     }
-
-    .izquierda:hover {
-        color: #17202A;
-    }
-
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
 
     .image {
-        border-radius: 30px;
-        width: 92%;
-        height: 92%;
-        margin-left: 4%;
+        width: 100%;
+        height: auto;
+        padding-right: 6%;
+        margin-left: 3%;
+    }
+
+    .slider {
+        margin-right: 3%;
     }
 
     .derecha {
         font-size: 2.5rem;
-        margin-right: -.5%;
-
-    }
-
-    .derecha:hover {
-        color: #17202A;
+        margin-right: 3%;
     }
 
     .izquierda {
         font-size: 2.5rem;
-        margin-left: -.5%;
+        margin-left: 3%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .image {
+        margin-top: -20%;
     }
 
-    .izquierda:hover {
-        color: #17202A;
+    .derecha {
+        font-size: 2.2rem;
+        top: 47%;
     }
 
-
+    .izquierda {
+        font-size: 2.2rem;
+        top: 47%;
+    }
 }
