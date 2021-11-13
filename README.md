@@ -2,11 +2,11 @@
 
 ## Proyecto Final CoderHouse Reactjs
 
-- ✨Proyecto Ecommerce realizado durante la cursada de que duro 7 semanas , 4 horas semanales ✨
+✨Proyecto Ecommerce realizado durante la cursada de que duro 7 semanas , 4 horas semanales ✨
 
 ##Link del proyecto
 
-- ✨ thundergamer.netlify.app ✨
+✨ https://thundergamer.netlify.app ✨
 
 ## Caracteristica del Proyecto
 
