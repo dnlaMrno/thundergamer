@@ -55,21 +55,21 @@
     background: #ff18c5c0;
 }
 
-@media screen and (max-width: 900px) {
-
-    .card {
-        margin-left: 10%;
-    }
-}
 
 @media screen and (max-width: 600px) {
     .subTituloDos {
-        font-size: 60%;
+        font-size: 65%;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
+
     .subTituloDos {
+        padding-top: 5%;
         font-size: 45%;
+    }
+
+    .card {
+        margin-left: 15%;
     }
 }

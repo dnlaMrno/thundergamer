@@ -164,13 +164,13 @@ ul {
 
     .logo {
         padding-bottom: 0.rem;
-        font-size: 23px;
+        font-size: 25px;
     }
 
     .toggle-button {
         display: block;
         justify-content: right;
-        margin-left: 7rem;
+        margin-left: 25rem;
     }
 
     ul {
@@ -222,7 +222,7 @@ ul {
     }
 
     .toggle-button {
-        margin-left: 3rem;
+        margin-left: 10rem;
     }
 }
 
@@ -233,12 +233,13 @@ ul {
     }
 
     .logo {
-        font-size: 16px;
+        margin-left: -2px;
+        font-size: 18px;
     }
 
     .toggle-button {
         font-size: 2rem;
-        margin-left: 1rem;
+        margin-left: 3rem;
     }
 
     .boton {

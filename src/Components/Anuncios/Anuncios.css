@@ -12,13 +12,11 @@
 }
 
 .propaUno {
-
     height: 40%;
     padding: 3rem;
     margin: 3rem;
     padding-left: 6%;
     margin-right: 8%;
-    border-radius: 20% 10%;
     overflow: hidden;
 }
 
@@ -30,15 +28,18 @@
 
 @media screen and (max-width: 900px) {
 
+    .subTitulo p {
+        font-size: 90%;
+    }
+
     .propa {
         display: flex;
         flex-direction: column;
     }
 
     .propaUno {
-        width: 55%;
-        margin-left: 22%;
-        border-radius: 20% 10%;
+        width: 65%;
+        margin-left: 18%;
         padding-bottom: 1%;
     }
 
@@ -51,27 +52,28 @@
 @media screen and (max-width: 600px) {
 
     .propaUno {
-        margin-left: 25%;
-        border-radius: 20% 10%;
+        width: 85%;
+        margin-left: 10%;
         margin-top: -4%;
     }
 
-    .subTitulo {
-        font-size: 75%;
-        margin-top: -10%;
+    .subTitulo p {
+        font-size: 70%;
+        margin-top: -12%;
+        margin-bottom: 5%;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
 
-    .propaUno {
-        border-radius: 26% 10%;
-        margin-left: 26%;
-        margin-top: -6%;
+    .subTitulo p {
+        padding-top: 2%;
+        font-size: 60%;
     }
 
-    .subTitulo {
-        font-size: 60%;
-        margin-top: -30%;
+    .propaUno {
+        width: 80%;
+        margin-left: 14%;
+        margin-top: -6%;
     }
 }

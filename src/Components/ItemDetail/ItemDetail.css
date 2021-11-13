@@ -82,6 +82,10 @@
 
 @media screen and (max-width: 900px) {
 
+    .big-img {
+        margin-left: 15%;
+    }
+
     .box {
         padding-left: 3%;
     }
@@ -107,31 +111,27 @@
 @media screen and (max-width: 600px) {
 
     .big-img {
-        margin-left: -3%;
+        margin-left: 2%;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
 
-    .big-img {
-        margin-left: -8%;
-    }
-
-    .box2 {
-        padding-left: 2%;
-        margin-left: 2%;
+    .contenido {
+        margin-right: 8%;
+        margin-left: -50%;
     }
 
     .big-img {
         width: 210px;
-        margin-left: 2%;
+        margin-left: -20%;
     }
 
     .row span {
         font-size: 1.5rem;
     }
 
-    .box h2 {
+    .row h2 {
         font-size: 1.5rem;
     }
 }

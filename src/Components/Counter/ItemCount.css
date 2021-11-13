@@ -91,7 +91,7 @@
 @media screen and (max-width: 900px) {
 
     .boton-carrito {
-        margin-left: 60%;
+        margin-left: 55%;
         margin-top: 1%;
     }
 
@@ -119,24 +119,36 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 600px) {
 
     .boton-carrito {
-        margin-left: 40%;
+        margin-left: 45%;
+        margin-top: -9%;
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .boton-carrito {
+        margin-left: 50%;
+        padding-top: 2%;
         margin-bottom: 2%;
     }
 
     .agregar {
         padding-left: 6%;
-        margin-right: -2%;
+        margin-right: -3%;
     }
 
     .seguir-cart {
-        margin-left: 25%;
+        font-size: 14px;
+        margin-left: -2%;
     }
 
     .agregar-cart1 {
-        margin-left: 20%;
+        font-size: 14px;
         margin-top: -8%;
     }
 }
