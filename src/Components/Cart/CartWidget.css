@@ -114,13 +114,6 @@
     margin-left: 1%;
 }
 
-.cartPrice p {
-    font-size: 24px;
-    color: inherit;
-    display: inline-block;
-    margin: 0 8px;
-}
-
 .cartPrice .vaciar {
     font-size: 24px;
     display: inline-block;
@@ -238,8 +231,13 @@
 
 @media screen and (max-width: 420px) {
 
+    .box1 {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
     .cartImg img {
-        margin-left: 20%;
+        margin-left: 27%;
     }
 
     .totalCompra {
@@ -254,7 +252,7 @@
     }
 
     .comprar {
-        margin-left: 30%;
+        margin-left: 32%;
         font-size: 12px;
     }
 
@@ -263,7 +261,6 @@
     }
 
     .cartTitle {
-        padding-top: 5%;
-
+        padding-top: 9%;
     }
 }

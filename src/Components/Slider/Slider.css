@@ -121,18 +121,24 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 420px) {
+
+    .slider {
+        margin-top: -30%;
+        margin-bottom: -35%;
+    }
+
     .image {
         margin-top: -20%;
     }
 
     .derecha {
         font-size: 2.2rem;
-        top: 47%;
+        top: 30%;
     }
 
     .izquierda {
         font-size: 2.2rem;
-        top: 47%;
+        top: 30%;
     }
 }
