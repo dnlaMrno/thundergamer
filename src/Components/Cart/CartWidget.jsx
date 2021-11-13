@@ -7,7 +7,7 @@ import '../Cart/CartWidget.css'
 
 export function CartWidget() {
 
-    const { carro, borrarItem, sumaTotal } = useCartContext()
+    const { carro, borrarItem, sumaTotal, vaciarCarrito } = useCartContext()
 
     function registrar() {
         alert('Debes Registrarte para Terminar la Compra')
@@ -49,9 +49,10 @@ export function CartWidget() {
                 <div>
                 </div>
                 :
-                <div >
+                <div>
                     <h1 className='totalCompra'>Total de la compra = $ {sumaTotal()}</h1>
                     <div className='seguir-compra'>
+                        <button className='btn-vaciarCompra' onClick={vaciarCarrito}>vaciar compra</button>
                         <Link to='/Home'>
                             <button >seguir comprando</button>
                         </Link>
@@ -64,3 +65,4 @@ export function CartWidget() {
         </div>
     )
 }
+

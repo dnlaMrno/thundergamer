@@ -74,15 +74,16 @@
 
 
 .totalCompra {
+    text-transform: uppercase;
     padding-bottom: 1%;
     font-size: 25px;
     color: #fff;
-    padding-left: 60%;
+    padding-left: 56%;
     padding-top: 1%;
 }
 
 .seguir-compra {
-    margin-left: 63%;
+    margin-left: 55%;
     margin-top: -1%;
     padding-top: 1%;
     padding-bottom: 3%;
@@ -141,6 +142,21 @@
     text-align: center;
 }
 
+.btn-vaciarCompra {
+    background-color: #172433;
+    color: rgb(255, 230, 0);
+    border-color: rgb(255, 230, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 7px 7px;
+    text-transform: uppercase;
+}
+
+.btn-vaciarCompra:hover {
+    border-color: rgba(255, 0, 255, 0.747);
+    color: rgba(255, 0, 255, 0.747);
+}
+
 @media screen and (max-width: 900px) {
 
     .comprar {
@@ -179,12 +195,12 @@
     .totalCompra {
         padding-top: 3%;
         padding-bottom: 2%;
-        font-size: 25px;
-        margin-left: -6%;
+        font-size: 18px;
+        margin-left: -18%;
     }
 
     .seguir-compra {
-        margin-left: 57%;
+        margin-left: 30%;
         padding-bottom: 2%;
     }
 
@@ -201,12 +217,12 @@
     }
 
     .totalCompra {
-        font-size: 20px;
-        margin-left: -15%;
+        font-size: 18px;
+        margin-left: -22%;
     }
 
     .seguir-compra {
-        margin-left: 45%;
+        margin-left: 15%;
         padding-bottom: 4%;
     }
 
@@ -227,12 +243,13 @@
     }
 
     .totalCompra {
-        font-size: 18px;
+        font-size: 16px;
         margin-left: -40%;
     }
 
     .seguir-compra {
-        margin-left: 17%;
+        font-size: 12px;
+        margin-left: 8%;
         padding-bottom: 4%;
     }
 
@@ -248,5 +265,18 @@
     .cartTitle {
         padding-top: 5%;
 
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+
+    .totalCompra {
+        font-size: 14px;
+        margin-left: -40%;
+    }
+
+    .seguir-compra {
+        font-size: 10px;
     }
 }
