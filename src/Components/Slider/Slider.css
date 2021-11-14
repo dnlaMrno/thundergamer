@@ -154,3 +154,16 @@
         top: 32%;
     }
 }
+
+@media screen and (max-width: 270px) {
+
+    .derecha {
+        font-size: 2rem;
+        top: 38%;
+    }
+
+    .izquierda {
+        font-size: 2rem;
+        top: 38%;
+    }
+}
