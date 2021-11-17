@@ -11,9 +11,11 @@ export const UseProvider = ({ children }) => {
 
     const [carro, setCarro] = useState([])
 
+
     const vaciarCarrito = () => {
         setCarro([])
     }
+
 
     function addItem(item, cantidad) {
         const index = carro.findIndex(i => i.item.id === item.id)
@@ -48,7 +50,7 @@ export const UseProvider = ({ children }) => {
             cantidadCarrito,
             borrarItem,
             sumaTotal,
-            vaciarCarrito,
+            vaciarCarrito
         }}>
             {children}
         </CartContext.Provider>

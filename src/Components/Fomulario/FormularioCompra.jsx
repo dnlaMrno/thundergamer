@@ -43,6 +43,7 @@ export function FormularioCompra() {
         })
     }
 
+
     return (
         <div className='box3'>
             <p className='titulo4'>
@@ -65,7 +66,7 @@ export function FormularioCompra() {
                                     onSubmit={handleOnSubmit}
                                 >
                                     <span>nombre*</span>
-                                    <input required
+                                    <input
                                         onChange={handleOnChange}
                                         type='text'
                                         placeholder='Ingrese Nombre'
@@ -73,9 +74,9 @@ export function FormularioCompra() {
                                         value={formData.nombre}
                                     />
                                     <span>apellido*</span>
-                                    <input required
+                                    <input
                                         onChange={handleOnChange}
-                                        type='text'
+                                        type='text' required
                                         placeholder='Ingrese Apellido'
                                         name='apellido'
                                         value={formData.apellido}
@@ -86,6 +87,7 @@ export function FormularioCompra() {
                                         type='password'
                                         placeholder='Ingrese Contraseña'
                                         name='contraseña'
+                                        maxLength='6'
                                         value={formData.contraseña}
                                     />
                                     <span>email*</span>
@@ -102,6 +104,7 @@ export function FormularioCompra() {
                                         type='text'
                                         placeholder='ingrese Telefono'
                                         name='telefono'
+                                        maxLength='10'
                                         value={formData.telefono}
                                     />
                                     <div>

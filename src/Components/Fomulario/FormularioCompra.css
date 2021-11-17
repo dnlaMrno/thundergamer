@@ -162,10 +162,21 @@ form .user-detail .input-box {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
+
+    .box3 {
+        padding-bottom: 11%;
+    }
+
+
+    .product-content {
+        padding-top: 8%;
+    }
 
     .titulo4 {
-        font-size: 18px;
+        padding-top: 10%;
+        padding-bottom: 7%;
+        font-size: 20px;
     }
 
     .cargado {
@@ -175,11 +186,13 @@ form .user-detail .input-box {
     }
 
     .btn-vaciar {
+        margin-top: 4%;
         margin-left: 8%;
         font-size: 11px;
     }
 
     .btn-vaciar2 {
+        margin-bottom: 4%;
         margin-left: 8%;
         font-size: 11px;
     }
