@@ -29,7 +29,6 @@ export const UseProvider = ({ children }) => {
 
     const borrarItem = (item) => {
         const borrarArticulo = carro.filter((article) => article.item.id !== item.item.id);
-
         setCarro([...borrarArticulo])
     }
 
@@ -49,7 +48,7 @@ export const UseProvider = ({ children }) => {
             cantidadCarrito,
             borrarItem,
             sumaTotal,
-            vaciarCarrito
+            vaciarCarrito,
         }}>
             {children}
         </CartContext.Provider>

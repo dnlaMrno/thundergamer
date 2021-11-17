@@ -5,6 +5,9 @@ import 'firebase/firestore'
 import '../Cart/CartWidget.css'
 
 
+
+
+
 export function CartWidget() {
 
     const { carro, borrarItem, sumaTotal, vaciarCarrito } = useCartContext()
@@ -12,6 +15,8 @@ export function CartWidget() {
     function registrar() {
         alert('Debes Registrarte para Terminar la Compra')
     }
+
+    console.log(carro);
 
     return (
 
@@ -61,6 +66,8 @@ export function CartWidget() {
                     </div>
                 </div>
             }
+            <div>
+            </div>
         </div>
     )
 }

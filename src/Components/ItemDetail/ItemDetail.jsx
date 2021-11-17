@@ -38,7 +38,7 @@ export const ItemDetail = ({ articulo }) => {
                 </div>
             </div>
 
-            <ItemCount initial={1} stock={8} onAdd={onAdd} />
+            <ItemCount initial={1} stock={articulo.stock} onAdd={onAdd} />
 
         </div>
     )

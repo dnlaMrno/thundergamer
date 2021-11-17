@@ -3,6 +3,7 @@ import { useCartContext } from '../Context/cartContext'
 import { getFirestore } from '../Services/getFirebase'
 import firebase from "firebase"
 import { useState } from 'react'
+import { ModalShop } from '../ModalShop/modal'
 import '../Fomulario/FormularioCompra.css'
 
 
@@ -13,8 +14,8 @@ export function FormularioCompra() {
     const { carro, sumaTotal, vaciarCarrito } = useCartContext()
     const [formData, setFormData] = useState(initialFormData)
 
-    const handleOnSubmit = (e) => {
 
+    const handleOnSubmit = (e) => {
         e.preventDefault()
         let orden = {}
 
@@ -49,7 +50,8 @@ export function FormularioCompra() {
             </p>
             <div className='product-content'>
                 <div className='recuadro'>
-                    {carro.length === 0 ?
+                    {carro.length === 0
+                        ?
                         <div>
                             <p className='sub-titulo'>¿ deseas continuar ?...</p>
                             <Link to='/'>
@@ -103,7 +105,7 @@ export function FormularioCompra() {
                                         value={formData.telefono}
                                     />
                                     <div>
-                                        <button className='btn-vaciar' >terminar compra</button>
+                                        <button className='btn-vaciar' ><ModalShop /></button>
                                         <button className='btn-vaciar2' onClick={vaciarCarrito}>cancelar compra</button>
                                     </div>
                                 </form>

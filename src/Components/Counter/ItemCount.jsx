@@ -10,7 +10,6 @@ export function ItemCount({ stock, initial, onAdd }) {
 
   const [handler, SetHandler] = useState(true)
 
-
   const handleOnClick = () => {
     if (count < stock) {
       setCount(count + 1)
