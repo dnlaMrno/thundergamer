@@ -1,20 +1,15 @@
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../Context/cartContext'
 import { BsFillTrashFill } from "react-icons/bs"
+import { ModalAlert } from '../AlertModal/ModalAlert'
 import 'firebase/firestore'
 import '../Cart/CartWidget.css'
-import { ModalAlert } from '../AlertModal/ModalAlert'
-
-
 
 
 
 export function CartWidget() {
 
     const { carro, borrarItem, sumaTotal, vaciarCarrito } = useCartContext()
-
-
-    console.log(carro);
 
     return (
 
@@ -58,7 +53,7 @@ export function CartWidget() {
                         <Link to='/Home'>
                             <button >seguir comprando</button>
                         </Link>
-                        <button> <ModalAlert /></button>
+                        <button > <ModalAlert /></button>
                     </div>
                 </div>
             }
