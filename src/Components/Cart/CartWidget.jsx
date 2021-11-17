@@ -3,6 +3,7 @@ import { useCartContext } from '../Context/cartContext'
 import { BsFillTrashFill } from "react-icons/bs"
 import 'firebase/firestore'
 import '../Cart/CartWidget.css'
+import { ModalAlert } from '../AlertModal/ModalAlert'
 
 
 
@@ -12,9 +13,6 @@ export function CartWidget() {
 
     const { carro, borrarItem, sumaTotal, vaciarCarrito } = useCartContext()
 
-    function registrar() {
-        alert('Debes Registrarte para Terminar la Compra')
-    }
 
     console.log(carro);
 
@@ -60,9 +58,7 @@ export function CartWidget() {
                         <Link to='/Home'>
                             <button >seguir comprando</button>
                         </Link>
-                        <Link to='/Formulario' >
-                            <button onClick={registrar} >siguiente</button>
-                        </Link>
+                        <button> <ModalAlert /></button>
                     </div>
                 </div>
             }

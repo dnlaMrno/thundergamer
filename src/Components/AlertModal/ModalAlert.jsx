@@ -1,11 +1,9 @@
-import { useState } from "react"
-import { Link } from "react-router-dom";
-import { Button, Modal } from 'react-bootstrap'
-import { useCartContext } from "../Context/cartContext";
+import { Link } from "react-router-dom"
+import { useState } from "react";
+import { Modal, Button } from "react-bootstrap"
 
-export function ModalShop() {
+export function ModalAlert() {
 
-    const { vaciarCarrito } = useCartContext()
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -21,13 +19,11 @@ export function ModalShop() {
                 <Modal.Header closeButton>
                     <Modal.Title>Thunder Gamer</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Gracias por tu compra...! te estaremos enviando un email
-                    con el detalle.</Modal.Body>
+                <Modal.Body> !..Ya casi la compra es tuya..¡ llena tus datos para terminar.</Modal.Body>
                 <Modal.Footer>
-
-                    <Link to='/'>
-                        <Button variant="primary" onClick={vaciarCarrito}>
-                            Volver al Inicio
+                    <Link to='/Formulario'>
+                        <Button variant="primary" >
+                            Ok
                         </Button>
                     </Link>
                 </Modal.Footer>
@@ -35,3 +31,6 @@ export function ModalShop() {
         </>
     );
 }
+
+
+
