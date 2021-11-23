@@ -14,6 +14,12 @@ export function FormularioCompra() {
     const { carro, sumaTotal, vaciarCarrito } = useCartContext()
     const [formData, setFormData] = useState(initialFormData)
 
+    const inputHandler = (e) => {
+        if (['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '^/'].includes(e.key)) {
+            e.preventDefault()
+        }
+    }
+
 
     const handleOnSubmit = (e) => {
         e.preventDefault()
@@ -67,14 +73,16 @@ export function FormularioCompra() {
                                 >
                                     <span>nombre*</span>
                                     <input
+                                        onKeyDown={inputHandler}
                                         onChange={handleOnChange}
-                                        type='text'
+                                        type='text' required
                                         placeholder='Ingrese Nombre'
                                         name='nombre'
                                         value={formData.nombre}
                                     />
                                     <span>apellido*</span>
                                     <input
+                                        onKeyDown={inputHandler}
                                         onChange={handleOnChange}
                                         type='text' required
                                         placeholder='Ingrese Apellido'

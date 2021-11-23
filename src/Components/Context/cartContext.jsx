@@ -11,7 +11,6 @@ export const UseProvider = ({ children }) => {
 
     const [carro, setCarro] = useState([])
 
-
     const vaciarCarrito = () => {
         setCarro([])
     }
@@ -33,6 +32,7 @@ export const UseProvider = ({ children }) => {
         const borrarArticulo = carro.filter((article) => article.item.id !== item.item.id);
         setCarro([...borrarArticulo])
     }
+
 
     const cantidadCarrito = () => {
         return carro.reduce((acum, cantidad) => acum + cantidad.quantity, 0)
