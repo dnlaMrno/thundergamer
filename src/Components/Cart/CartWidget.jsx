@@ -36,7 +36,7 @@ export function CartWidget() {
                             <img src={articulo.item.imagen} alt="foto" />
                         </div>
                         <div className='cartPrice'>
-                            <p>{articulo.quantity} X  $ {articulo.quantity * articulo.item.precio}</p>
+                            <p>{articulo.quantity} X  ${articulo.item.precio}</p>
                             <div className='vaciar' onClick={() => borrarItem(articulo)}>
                                 <BsFillTrashFill />
                             </div>
