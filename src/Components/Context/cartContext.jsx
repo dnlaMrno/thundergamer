@@ -15,7 +15,6 @@ export const UseProvider = ({ children }) => {
         setCarro([])
     }
 
-
     function addItem(item, cantidad) {
         const index = carro.findIndex(i => i.item.id === item.id)
         if (index > -1) {
@@ -27,6 +26,8 @@ export const UseProvider = ({ children }) => {
             setCarro([...carro, { item, quantity: cantidad }])
         }
     }
+
+    console.log(carro);
 
     const borrarItem = (item) => {
         const borrarArticulo = carro.filter((article) => article.item.id !== item.item.id);

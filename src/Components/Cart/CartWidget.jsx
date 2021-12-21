@@ -7,9 +7,11 @@ import '../Cart/CartWidget.css'
 
 
 
+
+
 export function CartWidget() {
 
-    const { carro, borrarItem, sumaTotal, vaciarCarrito, cantidadCarrito } = useCartContext()
+    const { carro, borrarItem, sumaTotal, vaciarCarrito } = useCartContext()
 
     return (
 
@@ -34,7 +36,7 @@ export function CartWidget() {
                             <img src={articulo.item.imagen} alt="foto" />
                         </div>
                         <div className='cartPrice'>
-                            <p> {cantidadCarrito()} X $ {articulo.item.precio + articulo.item.precio}</p>
+                            <p>{articulo.quantity} X  $ {articulo.quantity * articulo.item.precio}</p>
                             <div className='vaciar' onClick={() => borrarItem(articulo)}>
                                 <BsFillTrashFill />
                             </div>
@@ -59,8 +61,8 @@ export function CartWidget() {
                 </div>
             }
             <div>
-
             </div>
+
         </div>
 
     )
